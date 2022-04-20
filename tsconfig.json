@@ -1,48 +1,51 @@
 {
-  "compilerOptions": {
-    "baseUrl": "./src",
-    "paths": {
-      "@components/*": [
-        "components/*"
-      ],
-      "@hooks/*": [
-        "hooks/*"
-      ],
-      "@utils/*": [
-        "utils/*"
-      ]
-    },
-    "allowJs": true,
-    "alwaysStrict": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "lib": [
-      "dom",
-      "esnext"
-    ],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noEmit": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "strictNullChecks": true,
-    "target": "esnext",
-    "incremental": true
-  },
-  "exclude": [
-    "node_modules"
-  ],
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "i18n.ts"
-  ]
+	"compilerOptions": {
+		"baseUrl": "./src",
+		"paths": {
+			"@components/*": [
+				"components/*"
+			],
+			"@hooks/*": [
+				"hooks/*"
+			],
+			"@utils/*": [
+				"utils/*"
+			],
+			"@data/*": [
+				"data/*"
+			],
+		},
+		"allowJs": true,
+		"alwaysStrict": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"isolatedModules": true,
+		"jsx": "preserve",
+		"lib": [
+			"dom",
+			"esnext"
+		],
+		"module": "esnext",
+		"moduleResolution": "node",
+		"noEmit": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitAny": false,
+		"noImplicitReturns": false,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"resolveJsonModule": true,
+		"skipLibCheck": true,
+		"strict": false,
+		"strictNullChecks": true,
+		"target": "esnext",
+		"incremental": true
+	},
+	"exclude": [
+		"node_modules"
+	],
+	"include": [
+		"**/*.ts",
+		"**/*.tsx",
+		"i18n.ts"
+	]
 }
