@@ -9,6 +9,7 @@ const Home: NextPage = () => {
 	return (
 		<div>
 			<DynamicMap />
+			<p>Test</p>
 		</div>
 	);
 };
