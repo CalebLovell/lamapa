@@ -14,9 +14,9 @@ export default function Map() {
 
 	const renderMap = () => {
 		const svg = d3.select(mapRef.current);
-		svg.append(`path`).datum(worldGeojsonOuter).attr(`fill`, `white`).attr(`stroke`, `red`).attr(`d`, path);
+		svg.append(`path`).datum(worldGeojsonOuter).attr(`fill`, `white`).attr(`stroke`, `black`).attr(`d`, path);
+		svg.append(`path`).datum(worldGeojsonInner).attr(`fill`, `none`).attr(`stroke`, `black`).attr(`d`, path);
 		// svg.selectAll(`.country`).data(laGeojson.features).enter().append(`path`).attr(`class`, `country`).attr(`fill`, `#ddd`).attr(`d`, path);
-		svg.append(`path`).datum(worldGeojsonInner).attr(`fill`, `none`).attr(`stroke`, `red`).attr(`d`, path);
 	};
 
 	React.useEffect(() => {
