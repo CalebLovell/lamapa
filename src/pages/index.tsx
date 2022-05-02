@@ -7,7 +7,7 @@ const DynamicMap = dynamic(() => import(`@components/Map`), {
 
 const Home: NextPage = () => {
 	return (
-		<div style={{ width: `100vw`, height: `100vh` }}>
+		<div>
 			<DynamicMap />
 		</div>
 	);
