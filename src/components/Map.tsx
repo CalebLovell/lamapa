@@ -1,12 +1,11 @@
 import * as React from 'react';
 import * as d3 from 'd3';
 import * as topojson from 'topojson-client';
-import { worldTopojson } from '../data/worldTopojson';
+import { worldTopojson as worldGeojson } from '../data/worldGeojson';
 import { useWindowDimensions } from '@hooks/useWindowDimensions';
+import { Country } from './Country';
 
-const laGeojson = topojson.feature(worldTopojson, worldTopojson.objects.countries);
-const laGeojsonInner = topojson.mesh(worldTopojson, worldTopojson.objects.countries, (a, b) => a !== b);
-const laGeojsonOuter = topojson.mesh(worldTopojson, worldTopojson.objects.countries, (a, b) => a === b);
+const laTopoJson = topojson.feature(worldGeojson, worldGeojson.objects.countries);
 
 export default function Map() {
 	const mapRef = React.useRef(null);
@@ -15,26 +14,16 @@ export default function Map() {
 	const projection = d3
 		.geoAzimuthalEqualArea()
 		.rotate([80, 10])
-		.fitSize([width, height], { type: `FeatureCollection`, features: laGeojson.features });
-	const path = d3.geoPath(projection);
+		.fitSize([width, height], { type: `FeatureCollection`, features: laTopoJson.features });
+	const path = d3.geoPath().projection(projection);
 
-	const renderMap = () => {
-		const svg = d3.select(mapRef.current);
-		svg.append(`path`).datum(laGeojsonOuter).attr(`fill`, `none`).attr(`stroke`, `black`).attr(`stroke-width`, `1`).attr(`d`, path);
-		svg.append(`path`).datum(laGeojsonInner).attr(`fill`, `none`).attr(`stroke`, `black`).attr(`stroke-width`, `1`).attr(`d`, path);
-		svg.selectAll(`.country`)
-			.data(laGeojson.features)
-			.enter()
-			.append(`path`)
-			.attr(`class`, `country`)
-			.attr(`id`, d => d.properties.ADMIN)
-			.attr(`fill`, d => (d.properties.ADMIN === `Brazil` ? `red` : `blue`))
-			.attr(`d`, path);
-	};
+	d3.select(`body`).append(`div`).attr(`id`, `tooltip`).attr(`style`, `position: absolute; opacity: 0`);
 
-	React.useEffect(() => {
-		renderMap();
-	}, []);
+	const countries = laTopoJson.features.map(data => <Country key={data.properties.ADMIN} path={path(data)} tooltipData={data.properties.ADMIN} />);
 
-	return <svg id='map' ref={mapRef} width={width} height={height} />;
+	return (
+		<svg id='map' ref={mapRef} width={width} height={height}>
+			<g>{countries}</g>
+		</svg>
+	);
 }
