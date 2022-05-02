@@ -1,3 +1,4 @@
+import { TimelineSlider } from '@components/TimelineSlider';
 import type { NextPage } from 'next';
 import dynamic from 'next/dynamic';
 
@@ -7,7 +8,10 @@ const DynamicMap = dynamic(() => import(`@components/Map`), {
 
 const Home: NextPage = () => {
 	return (
-		<div>
+		<div className='flex justify-center w-full h-full'>
+			<div className='w-10'>
+				<TimelineSlider />
+			</div>
 			<DynamicMap />
 		</div>
 	);

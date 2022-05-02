@@ -4,12 +4,14 @@ import * as topojson from 'topojson-client';
 import { worldTopojson as worldGeojson } from '../data/worldGeojson';
 import { useWindowDimensions } from '@hooks/useWindowDimensions';
 import { Country } from './Country';
+import { useDataState } from './DataProvider';
 
 const laTopoJson = topojson.feature(worldGeojson, worldGeojson.objects.countries);
 
 export default function Map() {
 	const mapRef = React.useRef(null);
 	const { height, width } = useWindowDimensions();
+	const { year } = useDataState();
 
 	const projection = d3
 		.geoAzimuthalEqualArea()
@@ -19,7 +21,10 @@ export default function Map() {
 
 	d3.select(`body`).append(`div`).attr(`id`, `tooltip`).attr(`style`, `position: absolute; opacity: 0`);
 
-	const countries = laTopoJson.features.map(data => <Country key={data.properties.ADMIN} path={path(data)} tooltipData={data.properties.ADMIN} />);
+	const countries = laTopoJson.features.map(data => {
+		const country = year.find(x => x.name === data.properties.ADMIN);
+		return <Country key={data.properties.ADMIN} path={path(data)} tooltipData={data.properties.ADMIN} color={country?.color} />;
+	});
 
 	return (
 		<svg id='map' ref={mapRef} width={width} height={height}>
