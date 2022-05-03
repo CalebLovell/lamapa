@@ -1,6 +1,5 @@
 import * as React from 'react';
 import * as d3 from 'd3';
-import { useDataState } from './DataProvider';
 
 // show tooltip when hovering over a region
 const handleMouseOver = tooltipData => {
@@ -26,7 +25,7 @@ export const Country = ({ path, tooltipData, color }) => {
 			d={path}
 			fill={color}
 			strokeWidth='1.5'
-			stroke='grey'
+			stroke='white'
 			onMouseOver={() => {
 				handleMouseOver(tooltipData);
 			}}

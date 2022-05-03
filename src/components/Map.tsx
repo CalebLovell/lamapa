@@ -2,7 +2,6 @@ import * as React from 'react';
 import * as d3 from 'd3';
 import * as topojson from 'topojson-client';
 import { worldTopojson as worldGeojson } from '../data/worldGeojson';
-import { useWindowDimensions } from '@hooks/useWindowDimensions';
 import { Country } from './Country';
 import { useDataState } from './DataProvider';
 
@@ -10,8 +9,10 @@ const laTopoJson = topojson.feature(worldGeojson, worldGeojson.objects.countries
 
 export default function Map() {
 	const mapRef = React.useRef(null);
-	const { height, width } = useWindowDimensions();
 	const { year } = useDataState();
+
+	const width = 700;
+	const height = 800;
 
 	const projection = d3
 		.geoAzimuthalEqualArea()

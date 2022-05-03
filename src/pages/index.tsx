@@ -1,19 +1,24 @@
+import { PageWrapper } from '@components/PageWrapper';
 import { TimelineSlider } from '@components/TimelineSlider';
-import type { NextPage } from 'next';
 import dynamic from 'next/dynamic';
 
 const DynamicMap = dynamic(() => import(`@components/Map`), {
 	ssr: false,
 });
 
-const Home: NextPage = () => {
+const Home = () => {
 	return (
-		<div className='flex justify-center w-full h-full'>
-			<div className='w-10'>
-				<TimelineSlider />
-			</div>
-			<DynamicMap />
-		</div>
+		<PageWrapper>
+			<main className='flex flex-col items-center justify-center h-full'>
+				<h1 className='mt-4 text-3xl font-medium text-gray-100'>Latin America Political History</h1>
+				<div className='flex justify-center w-full mt-4'>
+					<TimelineSlider />
+				</div>
+				<div id='map-container' className='w-full h-full'>
+					<DynamicMap />
+				</div>
+			</main>
+		</PageWrapper>
 	);
 };
 
