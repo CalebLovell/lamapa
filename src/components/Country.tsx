@@ -1,17 +1,18 @@
 import * as React from 'react';
 import * as d3 from 'd3';
+import { motion } from 'framer-motion';
 
-// show tooltip when hovering over a region
+// Show tooltip when hovering over a region
 const handleMouseOver = tooltipData => {
-	d3.select(`#tooltip`).style(`opacity`, 1).style(`background-color`, `burlywood`).text(tooltipData);
+	d3.select(`#tooltip`).style(`opacity`, 1).style(`background-color`, `white`).text(tooltipData);
 };
 
-// hide tooltip as mouse leaves region
+// Hide tooltip as mouse leaves region
 const handleMouseOut = () => {
 	d3.select(`#tooltip`).style(`opacity`, 0);
 };
 
-// get mouse location so tooltip tracks cursor
+// Get mouse location so tooltip tracks cursor
 const handleMouseMove = event => {
 	d3.select(`#tooltip`)
 		.style(`left`, `${event.pageX + 10}px`)
@@ -20,19 +21,16 @@ const handleMouseMove = event => {
 
 export const Country = ({ path, tooltipData, color }) => {
 	return (
-		<path
+		<motion.path
+			whileHover={{ fill: `purple` }}
 			className='path'
 			d={path}
 			fill={color}
 			strokeWidth='1.5'
 			stroke='white'
-			onMouseOver={() => {
-				handleMouseOver(tooltipData);
-			}}
+			onMouseOver={() => handleMouseOver(tooltipData)}
 			onMouseOut={handleMouseOut}
-			onMouseMove={event => {
-				handleMouseMove(event);
-			}}
+			onMouseMove={event => handleMouseMove(event)}
 		/>
 	);
 };
