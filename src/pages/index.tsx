@@ -11,15 +11,19 @@ const Home = () => {
 	return (
 		<PageWrapper>
 			<main className='flex flex-col items-center justify-center h-full'>
-				<h1 className='mt-4 text-3xl font-medium text-gray-100'>Latin America Political History</h1>
-				<div className='flex justify-center w-full mt-4'>
-					<TimelineSlider />
-				</div>
-				<div className='flex justify-center w-full mt-4'>
-					<InfoPanel />
-				</div>
-				<div id='map-container' className='w-full h-full'>
-					<DynamicMap />
+				<h1 className='py-4 text-3xl font-medium text-gray-100'>Latin America Political History</h1>
+				<div className='flex justify-center'>
+					<div id='map-container' className='w-full h-full'>
+						<DynamicMap />
+					</div>
+					<div className='w-full h-full'>
+						<div className='w-full mb-4'>
+							<TimelineSlider />
+						</div>
+						<div className='w-full'>
+							<InfoPanel />
+						</div>
+					</div>
 				</div>
 			</main>
 		</PageWrapper>
