@@ -1,44 +1,45 @@
-export type Country = {
-	name: string;
-	headOfState: string;
-	value: number;
-};
-
-export type Year = Country[];
-
-const year2022: Year = [
-	{ name: `United States of America`, headOfState: `Biden`, value: 4 },
-	{ name: `Puerto Rico`, headOfState: `Biden`, value: 4 },
-	{ name: `Mexico`, headOfState: `AMLO`, value: 2 },
-	{ name: `Cuba`, headOfState: `Miguel Díaz-Canel`, value: 1 },
-	{ name: `Jamaica`, headOfState: `Andrew Holness`, value: 7 },
-	{ name: `Haiti`, headOfState: `Ariel Henry`, value: 5 },
-	{ name: `Dominican Republic`, headOfState: `Luis Abinader`, value: 4 },
-	{ name: `Trinidad and Tobago`, headOfState: `Paula-Mae Weekes`, value: 5 },
-	{ name: `El Salvador`, headOfState: `Nayib Bukele`, value: 10 },
-	{ name: `Honduras`, headOfState: `Xiomara Castro`, value: 3 },
-	{ name: `Belize`, headOfState: `John Antonio Briceño`, value: 6 },
-	{ name: `Guatemala`, headOfState: `Alejandro Giammattei`, value: 7 },
-	{ name: `Nicaragua`, headOfState: `Daniel Ortega`, value: 0 },
-	{ name: `Costa Rica`, headOfState: `Rodrigo Chaves`, value: 4 },
-	{ name: `Panama`, headOfState: `Laurentino Cortizo`, value: 4 },
-	{ name: `Colombia`, headOfState: `Iván Duque`, value: 6 },
-	{ name: `Venezuela`, headOfState: `Nicolás Maduro`, value: 0 },
-	{ name: `Guyana`, headOfState: `Irfaan Ali`, value: 2 },
-	{ name: `Suriname`, headOfState: `Chan Santokhi`, value: 4 },
-	// { name: `French Guyana`, headOfState: `Gabriel Serville`, value: 0 },
-	{ name: `Ecuador`, headOfState: `Guillermo Lasso`, value: 7 },
-	{ name: `Peru`, headOfState: `Pedro Castillo`, value: 1 },
-	{ name: `Chile`, headOfState: `Gabriel Borique`, value: 3 },
-	{ name: `Argentina`, headOfState: `Alberto Fernández`, value: 2 },
-	{ name: `Uruguay`, headOfState: `Luis Lacalle Pou`, value: 6 },
-	{ name: `Paraguay`, headOfState: `Mario Abdo Benítez`, value: 8 },
-	{ name: `Brazil`, headOfState: `Bolsonaro`, value: 10 },
-	{ name: `Bolivia`, headOfState: `Luis Arce`, value: 2 },
-];
-
-export const years = [year2022];
-
 export type MapColorType = `global` | `usa`;
 
-export const initialMapColorType: MapColorType = `global`;
+export type Year = any;
+
+export type HeadOfState = {
+	id: string;
+	country_id: string;
+	name: string;
+	political_leaning: number;
+	state_date?: string;
+	end_date?: string;
+	// TODO
+	country: string;
+};
+
+export const testData: HeadOfState[] = [
+	{ id: `test`, country_id: `test`, country: `United States of America`, name: `Biden`, political_leaning: 4 },
+	{ id: `test`, country_id: `test`, country: `Puerto Rico`, name: `Biden`, political_leaning: 4 },
+	{ id: `test`, country_id: `test`, country: `Mexico`, name: `AMLO`, political_leaning: 2 },
+	{ id: `test`, country_id: `test`, country: `Cuba`, name: `Miguel Díaz-Canel`, political_leaning: 1 },
+	{ id: `test`, country_id: `test`, country: `Jamaica`, name: `Andrew Holness`, political_leaning: 7 },
+	{ id: `test`, country_id: `test`, country: `Haiti`, name: `Ariel Henry`, political_leaning: 5 },
+	{ id: `test`, country_id: `test`, country: `Dominican Republic`, name: `Luis Abinader`, political_leaning: 4 },
+	{ id: `test`, country_id: `test`, country: `Trinidad and Tobago`, name: `Paula-Mae Weekes`, political_leaning: 5 },
+	{ id: `test`, country_id: `test`, country: `El Salvador`, name: `Nayib Bukele`, political_leaning: 10 },
+	{ id: `test`, country_id: `test`, country: `Honduras`, name: `Xiomara Castro`, political_leaning: 3 },
+	{ id: `test`, country_id: `test`, country: `Belize`, name: `John Antonio Briceño`, political_leaning: 6 },
+	{ id: `test`, country_id: `test`, country: `Guatemala`, name: `Alejandro Giammattei`, political_leaning: 7 },
+	{ id: `test`, country_id: `test`, country: `Nicaragua`, name: `Daniel Ortega`, political_leaning: 0 },
+	{ id: `test`, country_id: `test`, country: `Costa Rica`, name: `Rodrigo Chaves`, political_leaning: 4 },
+	{ id: `test`, country_id: `test`, country: `Panama`, name: `Laurentino Cortizo`, political_leaning: 4 },
+	{ id: `test`, country_id: `test`, country: `Colombia`, name: `Iván Duque`, political_leaning: 6 },
+	{ id: `test`, country_id: `test`, country: `Venezuela`, name: `Nicolás Maduro`, political_leaning: 0 },
+	{ id: `test`, country_id: `test`, country: `Guyana`, name: `Irfaan Ali`, political_leaning: 2 },
+	{ id: `test`, country_id: `test`, country: `Suriname`, name: `Chan Santokhi`, political_leaning: 4 },
+	{ id: `test`, country_id: `test`, country: `Ecuador`, name: `Guillermo Lasso`, political_leaning: 7 },
+	{ id: `test`, country_id: `test`, country: `Peru`, name: `Pedro Castillo`, political_leaning: 1 },
+	{ id: `test`, country_id: `test`, country: `Chile`, name: `Gabriel Borique`, political_leaning: 3 },
+	{ id: `test`, country_id: `test`, country: `Argentina`, name: `Alberto Fernández`, political_leaning: 2 },
+	{ id: `test`, country_id: `test`, country: `Uruguay`, name: `Luis Lacalle Pou`, political_leaning: 6 },
+	{ id: `test`, country_id: `test`, country: `Paraguay`, name: `Mario Abdo Benítez`, political_leaning: 8 },
+	{ id: `test`, country_id: `test`, country: `Brazil`, name: `Bolsonaro`, political_leaning: 10 },
+	{ id: `test`, country_id: `test`, country: `Bolivia`, name: `Luis Arce`, political_leaning: 2 },
+	// { id: 'test', country_id: 'test', country: `French Guyana`, name: `Gabriel Serville`, political_leaning: 0 },
+];

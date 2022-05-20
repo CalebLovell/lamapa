@@ -1,16 +1,20 @@
-import { initialMapColorType, MapColorType, Year, years } from '@data/data';
+import { MapColorType, Year } from '@data/data';
 import * as React from 'react';
 
-type Action = { type: `SET_YEAR`; payload: Year } | { type: `SET_MAP_COLOR_TYPE`; payload: MapColorType };
+type Action =
+	| { type: `SET_YEAR`; payload: Year }
+	| { type: `SET_MAP_COLOR_TYPE`; payload: MapColorType }
+	| { type: `SET_SELECTED_COUNTRY`; payload: string | null };
 type Dispatch = (action: Action) => void;
-type State = { year: Year; mapColorType: MapColorType };
+type State = { year: Year; mapColorType: MapColorType; selectedCountryName: string | null };
 
 const DataStateContext = React.createContext<State | undefined>(undefined);
 const DataDispatchContext = React.createContext<Dispatch | undefined>(undefined);
 
 const initialDataState = {
-	year: years[0],
-	mapColorType: initialMapColorType,
+	year: `2022-01-01` as Year,
+	mapColorType: `global` as MapColorType,
+	selectedCountryName: null,
 };
 
 const DataReducer = (state: State, action: Action) => {
@@ -20,6 +24,9 @@ const DataReducer = (state: State, action: Action) => {
 		}
 		case `SET_MAP_COLOR_TYPE`: {
 			return { ...state, mapColorType: action.payload };
+		}
+		case `SET_SELECTED_COUNTRY`: {
+			return { ...state, selectedCountryName: action.payload };
 		}
 		default: {
 			throw new Error(`Unhandled action type: ${action}`);
