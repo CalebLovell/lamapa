@@ -7,7 +7,7 @@ const DynamicMap = dynamic(() => import(`@components/Map`), {
 	ssr: false,
 });
 
-const Home = () => {
+const Index = () => {
 	return (
 		<PageWrapper>
 			<main className='flex flex-col items-center justify-center h-full'>
@@ -30,4 +30,4 @@ const Home = () => {
 	);
 };
 
-export default Home;
+export default Index;
