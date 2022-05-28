@@ -4,7 +4,6 @@ import * as topojson from 'topojson-client';
 import { worldTopojson as worldGeojson } from '@data/worldGeojson';
 import { Country } from '@components/Country';
 import { useDataState } from '@components/DataProvider';
-import { testData } from '@data/data';
 
 const laTopoJson = topojson.feature(worldGeojson, worldGeojson.objects.countries);
 const height = 800;

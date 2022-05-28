@@ -2,23 +2,24 @@ import { PageWrapper } from '@components/PageWrapper';
 import { InfoPanel } from '@components/InfoPanel';
 import { TimelineSlider } from '@components/TimelineSlider';
 import dynamic from 'next/dynamic';
-import { getCountries } from '@data/api';
+import { getHeadsOfState } from '@data/api';
 
 const DynamicMap = dynamic(() => import(`@components/Map`), {
 	ssr: false,
 });
 
 export async function getServerSideProps() {
-	const countries = await getCountries();
+	const date = new Date(`2018-11-11`);
+	const headsOfState = await getHeadsOfState({ date });
 	return {
 		props: {
-			countries,
+			headsOfState,
 		},
 	};
 }
 
-const Index = ({ countries }) => {
-	console.log(countries);
+const Index = ({ headsOfState }) => {
+	console.log(headsOfState);
 	return (
 		<PageWrapper>
 			{/* <main className='flex flex-col items-center justify-center h-full'>
