@@ -1,0 +1,27 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+   provider = "prisma-client-js"
+}
+
+datasource db {
+   provider = "sqlite"
+   url      = "file:prod.db"
+}
+
+model Country {
+   id           Int           @id @default(autoincrement())
+   name         String
+   headsOfState HeadOfState[]
+}
+
+model HeadOfState {
+   id               String   @id @default(cuid())
+   author           Country  @relation(fields: [countryId], references: [id])
+   countryId        Int
+   name             String
+   politicalLeaning Int
+   startDate        DateTime
+   endDate          DateTime
+}
