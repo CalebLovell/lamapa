@@ -18,7 +18,7 @@ model Country {
 
 model HeadOfState {
    id               String   @id @default(cuid())
-   author           Country  @relation(fields: [countryId], references: [id])
+   country          Country  @relation(fields: [countryId], references: [id])
    countryId        Int
    name             String
    politicalLeaning Int

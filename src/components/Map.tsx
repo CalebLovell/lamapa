@@ -4,6 +4,7 @@ import * as topojson from 'topojson-client';
 import { worldTopojson as worldGeojson } from '@data/worldGeojson';
 import { Country } from '@components/Country';
 import { useDataState } from '@components/DataProvider';
+import { Country as CountryType, HeadOfState } from '@prisma/client';
 
 const laTopoJson = topojson.feature(worldGeojson, worldGeojson.objects.countries);
 const height = 800;
@@ -13,9 +14,13 @@ const projectionPath = d3.geoPath().projection(projection);
 
 d3.select(`body`).append(`div`).attr(`id`, `tooltip`).attr(`style`, `position: absolute; opacity: 0`);
 
-export default function Map() {
+type Props = {
+	headsOfState: (HeadOfState & { country: CountryType })[];
+};
+
+export default function Map({ headsOfState }: Props) {
 	const mapRef = React.useRef(null);
-	const { year, mapColorType } = useDataState();
+	const { mapColorType } = useDataState();
 
 	const domain = mapColorType === `global` ? [0, 10] : [10, 0];
 	const interpolateColor = d3.scaleSequential(d3.interpolateRdBu).domain(domain);
@@ -23,8 +28,8 @@ export default function Map() {
 	const countries = laTopoJson.features.map(data => {
 		const countryName = data.properties.ADMIN;
 		const path = projectionPath(data);
-		const headOfState = testData.find(x => x.country === countryName);
-		const color = headOfState ? interpolateColor(headOfState.political_leaning) : `black`;
+		const headOfState = headsOfState?.find(x => x.country.name === countryName);
+		const color = headOfState ? interpolateColor(headOfState.politicalLeaning) : `black`;
 		return <Country key={countryName} path={path} name={countryName} color={color} />;
 	});
 

@@ -1,4 +1,4 @@
-import { MapColorType, Year } from '@data/data';
+import { MapColorType, Year } from '@data/types';
 import * as React from 'react';
 
 type Action =
