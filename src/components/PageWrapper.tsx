@@ -49,8 +49,8 @@ export const PageWrapper: React.FC<Props> = ({ metadata, children }) => {
 			</PlausibleProvider>
 			<div className='bg-gray-700'>
 				<div className='h-1 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500' />
-				<div className='max-w-6xl mx-auto'>
-					<main className='flex flex-col min-h-content'>{children}</main>
+				<div className='mx-auto max-w-6xl'>
+					<main className='flex min-h-content flex-col'>{children}</main>
 				</div>
 			</div>
 		</>
