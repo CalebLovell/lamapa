@@ -4,7 +4,7 @@ import * as topojson from 'topojson-client';
 import { worldTopojson as worldGeojson } from '@data/worldGeojson';
 import { Country } from '@components/Country';
 import { useDataState } from '@components/DataProvider';
-import { Country as CountryType, HeadOfState } from '@prisma/client';
+import { HeadOfStateReturn } from '@data/types';
 
 const laTopoJson = topojson.feature(worldGeojson, worldGeojson.objects.countries);
 const height = 800;
@@ -15,7 +15,7 @@ const projectionPath = d3.geoPath().projection(projection);
 d3.select(`body`).append(`div`).attr(`id`, `tooltip`).attr(`style`, `position: absolute; opacity: 0`);
 
 type Props = {
-	headsOfState: (HeadOfState & { country: CountryType })[];
+	headsOfState: HeadOfStateReturn[] | undefined;
 };
 
 export default function Map({ headsOfState }: Props) {

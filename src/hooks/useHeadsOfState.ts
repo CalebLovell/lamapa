@@ -1,9 +1,9 @@
 import { useQuery } from 'react-query';
 import axios from 'axios';
-import { HeadOfState } from '@prisma/client';
+import { HeadOfStateReturn } from '@data/types';
 
 const getHeadsOfState = async (date: Date) => {
-	const { data } = await axios.get<HeadOfState[]>(`/api/headOfState`, {
+	const { data } = await axios.get<HeadOfStateReturn[]>(`/api/headOfState`, {
 		params: {
 			date,
 		},
