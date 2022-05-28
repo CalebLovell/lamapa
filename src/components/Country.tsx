@@ -8,7 +8,7 @@ export const Country = ({ path, name, color }: { path: string | null; name: stri
 	const onClick = () => dispatch({ type: `SET_SELECTED_COUNTRY`, payload: name });
 	return (
 		<motion.path
-			whileHover={{ fill: `purple` }}
+			// whileHover={{ fill: `purple` }}
 			onClick={onClick}
 			className='path'
 			d={path ? path : undefined}

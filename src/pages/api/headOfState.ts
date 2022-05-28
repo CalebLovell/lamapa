@@ -11,10 +11,10 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 		const headsOfState = await prisma.headOfState.findMany({
 			where: {
 				startDate: {
-					lte: req.body.date,
+					lte: req.query.date,
 				},
 				endDate: {
-					gte: req.body.date,
+					gte: req.query.date,
 				},
 			},
 			include: {
