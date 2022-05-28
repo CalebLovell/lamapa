@@ -2,15 +2,26 @@ import { PageWrapper } from '@components/PageWrapper';
 import { InfoPanel } from '@components/InfoPanel';
 import { TimelineSlider } from '@components/TimelineSlider';
 import dynamic from 'next/dynamic';
+import { getCountries } from '@data/api';
 
 const DynamicMap = dynamic(() => import(`@components/Map`), {
 	ssr: false,
 });
 
-const Index = () => {
+export async function getServerSideProps() {
+	const countries = await getCountries();
+	return {
+		props: {
+			countries,
+		},
+	};
+}
+
+const Index = ({ countries }) => {
+	console.log(countries);
 	return (
 		<PageWrapper>
-			<main className='flex flex-col items-center justify-center h-full'>
+			{/* <main className='flex flex-col items-center justify-center h-full'>
 				<h1 className='py-4 text-3xl font-medium text-gray-100'>Latin America Political History</h1>
 				<div className='flex justify-center'>
 					<div id='map-container' className='w-full h-full'>
@@ -25,7 +36,7 @@ const Index = () => {
 						</div>
 					</div>
 				</div>
-			</main>
+			</main> */}
 		</PageWrapper>
 	);
 };
