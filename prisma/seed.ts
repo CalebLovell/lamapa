@@ -12,8 +12,8 @@ async function main() {
 	console.log({ seededCountries });
 
 	const createManyHeadsOfStatePromises = headsOfState.map(x => {
-		const { countryId, name, politicalLeaning, startDate, endDate } = x;
-		return prisma.headOfState.create({ data: { countryId, name, politicalLeaning, startDate, endDate } });
+		const { countryId, name, party, leaning, tookOffice, leftOffice } = x;
+		return prisma.headOfState.create({ data: { countryId, name, party, leaning, tookOffice, leftOffice } });
 	});
 	const seededHeadsOfState = await Promise.all(createManyHeadsOfStatePromises);
 	console.log({ seededHeadsOfState });

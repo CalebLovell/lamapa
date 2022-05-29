@@ -1,6 +1,9 @@
-import { Country, HeadOfState } from '@prisma/client';
+import { Country } from '@prisma/client';
+import { brazil } from './brazil';
+import { mexico } from './mexico';
+import { usa } from './usa';
 
-const politicalLeanings = {
+export const leanings = {
 	LEFT: 1,
 	CENTER_LEFT: 2,
 	CENTRIST: 3,
@@ -39,37 +42,40 @@ export const countries: Country[] = [
 	{ id: 28, name: `Trinidad and Tobago` },
 ];
 
-const startDate = new Date(`2021-10-10`);
-const endDate = new Date(`2022-10-10`);
+export const raw = [...usa, ...mexico, ...brazil];
 
-export const headsOfState: Omit<HeadOfState, `id`>[] = [
-	{ countryId: 1, name: `Biden`, politicalLeaning: politicalLeanings.CENTER_LEFT, startDate: new Date(`2021-01-20`), endDate: new Date() },
-	{ countryId: 1, name: `Trump`, politicalLeaning: politicalLeanings.CENTER_LEFT, startDate: new Date(`2017-01-20`), endDate: new Date(`2021-01-20`) },
-	{ countryId: 1, name: `Obama`, politicalLeaning: politicalLeanings.CENTER_LEFT, startDate: new Date(`2009-01-20`), endDate: new Date(`2017-01-20`) },
-	{ countryId: 2, name: `AMLO`, politicalLeaning: politicalLeanings.LEFT, startDate, endDate },
-	{ countryId: 24, name: `Miguel Díaz-Canel`, politicalLeaning: politicalLeanings.LEFT, startDate, endDate },
-	{ countryId: 5, name: `Andrew Holness`, politicalLeaning: 7, startDate, endDate },
-	{ countryId: 5, name: `Ariel Henry`, politicalLeaning: 5, startDate, endDate },
-	{ countryId: 5, name: `Luis Abinader`, politicalLeaning: 4, startDate, endDate },
-	{ countryId: 5, name: `Paula-Mae Weekes`, politicalLeaning: 5, startDate, endDate },
-	{ countryId: 5, name: `Nayib Bukele`, politicalLeaning: 10, startDate, endDate },
-	{ countryId: 5, name: `Xiomara Castro`, politicalLeaning: 3, startDate, endDate },
-	{ countryId: 5, name: `John Antonio Briceño`, politicalLeaning: 6, startDate, endDate },
-	{ countryId: 5, name: `Alejandro Giammattei`, politicalLeaning: 7, startDate, endDate },
-	{ countryId: 5, name: `Daniel Ortega`, politicalLeaning: 0, startDate, endDate },
-	{ countryId: 5, name: `Rodrigo Chaves`, politicalLeaning: 4, startDate, endDate },
-	{ countryId: 5, name: `Laurentino Cortizo`, politicalLeaning: 4, startDate, endDate },
-	{ countryId: 5, name: `Iván Duque`, politicalLeaning: 6, startDate, endDate },
-	{ countryId: 5, name: `Nicolás Maduro`, politicalLeaning: 0, startDate, endDate },
-	{ countryId: 5, name: `Irfaan Ali`, politicalLeaning: 2, startDate, endDate },
-	{ countryId: 5, name: `Chan Santokhi`, politicalLeaning: 4, startDate, endDate },
-	{ countryId: 5, name: `Guillermo Lasso`, politicalLeaning: 7, startDate, endDate },
-	{ countryId: 5, name: `Pedro Castillo`, politicalLeaning: 1, startDate, endDate },
-	{ countryId: 5, name: `Gabriel Borique`, politicalLeaning: 3, startDate, endDate },
-	{ countryId: 5, name: `Alberto Fernández`, politicalLeaning: 2, startDate, endDate },
-	{ countryId: 5, name: `Luis Lacalle Pou`, politicalLeaning: 6, startDate, endDate },
-	{ countryId: 5, name: `Mario Abdo Benítez`, politicalLeaning: 8, startDate, endDate },
-	{ countryId: 5, name: `Bolsonaro`, politicalLeaning: 10, startDate, endDate },
-	{ countryId: 5, name: `Luis Arce`, politicalLeaning: 2, startDate, endDate },
-	{ countryId: 5, name: `Gabriel Serville`, politicalLeaning: 0, startDate, endDate },
-];
+export const headsOfState = raw.map(x => {
+	const { tookOffice, leftOffice } = x;
+	return { ...x, tookOffice: new Date(tookOffice), leftOffice: new Date(leftOffice) };
+});
+
+// const tookOffice = new Date(`2021-10-10`);
+// const leftOffice = new Date(`2022-10-10`);
+
+// export const headsOfState: Omit<HeadOfState, `id`>[] = [
+// 	{ countryId: 24, name: `Miguel Díaz-Canel`, leaning: leanings.LEFT, tookOffice, leftOffice },
+// 	{ countryId: 5, name: `Andrew Holness`, leaning: 7, tookOffice, leftOffice },
+// 	{ countryId: 5, name: `Ariel Henry`, leaning: 5, tookOffice, leftOffice },
+// 	{ countryId: 5, name: `Luis Abinader`, leaning: 4, tookOffice, leftOffice },
+// 	{ countryId: 5, name: `Paula-Mae Weekes`, leaning: 5, tookOffice, leftOffice },
+// 	{ countryId: 5, name: `Nayib Bukele`, leaning: 10, tookOffice, leftOffice },
+// 	{ countryId: 5, name: `Xiomara Castro`, leaning: 3, tookOffice, leftOffice },
+// 	{ countryId: 5, name: `John Antonio Briceño`, leaning: 6, tookOffice, leftOffice },
+// 	{ countryId: 5, name: `Alejandro Giammattei`, leaning: 7, tookOffice, leftOffice },
+// 	{ countryId: 5, name: `Daniel Ortega`, leaning: 0, tookOffice, leftOffice },
+// 	{ countryId: 5, name: `Rodrigo Chaves`, leaning: 4, tookOffice, leftOffice },
+// 	{ countryId: 5, name: `Laurentino Cortizo`, leaning: 4, tookOffice, leftOffice },
+// 	{ countryId: 5, name: `Iván Duque`, leaning: 6, tookOffice, leftOffice },
+// 	{ countryId: 5, name: `Nicolás Maduro`, leaning: 0, tookOffice, leftOffice },
+// 	{ countryId: 5, name: `Irfaan Ali`, leaning: 2, tookOffice, leftOffice },
+// 	{ countryId: 5, name: `Chan Santokhi`, leaning: 4, tookOffice, leftOffice },
+// 	{ countryId: 5, name: `Guillermo Lasso`, leaning: 7, tookOffice, leftOffice },
+// 	{ countryId: 5, name: `Pedro Castillo`, leaning: 1, tookOffice, leftOffice },
+// 	{ countryId: 5, name: `Gabriel Borique`, leaning: 3, tookOffice, leftOffice },
+// 	{ countryId: 5, name: `Alberto Fernández`, leaning: 2, tookOffice, leftOffice },
+// 	{ countryId: 5, name: `Luis Lacalle Pou`, leaning: 6, tookOffice, leftOffice },
+// 	{ countryId: 5, name: `Mario Abdo Benítez`, leaning: 8, tookOffice, leftOffice },
+// 	{ countryId: 5, name: `Bolsonaro`, leaning: 10, tookOffice, leftOffice },
+// 	{ countryId: 5, name: `Luis Arce`, leaning: 2, tookOffice, leftOffice },
+// 	{ countryId: 5, name: `Gabriel Serville`, leaning: 0, tookOffice, leftOffice },
+// ];

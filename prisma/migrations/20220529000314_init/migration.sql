@@ -9,8 +9,9 @@ CREATE TABLE "HeadOfState" (
     "id" TEXT NOT NULL PRIMARY KEY,
     "countryId" INTEGER NOT NULL,
     "name" TEXT NOT NULL,
-    "politicalLeaning" INTEGER NOT NULL,
-    "startDate" DATETIME NOT NULL,
-    "endDate" DATETIME NOT NULL,
+    "party" TEXT NOT NULL,
+    "leaning" INTEGER NOT NULL,
+    "tookOffice" DATETIME NOT NULL,
+    "leftOffice" DATETIME NOT NULL,
     CONSTRAINT "HeadOfState_countryId_fkey" FOREIGN KEY ("countryId") REFERENCES "Country" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
 );

@@ -17,11 +17,12 @@ model Country {
 }
 
 model HeadOfState {
-   id               String   @id @default(cuid())
-   country          Country  @relation(fields: [countryId], references: [id])
-   countryId        Int
-   name             String
-   politicalLeaning Int
-   startDate        DateTime
-   endDate          DateTime
+   id         String   @id @default(cuid())
+   country    Country  @relation(fields: [countryId], references: [id])
+   countryId  Int
+   name       String
+   party      String
+   leaning    Int
+   tookOffice DateTime
+   leftOffice DateTime
 }
