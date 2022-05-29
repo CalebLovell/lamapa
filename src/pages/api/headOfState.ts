@@ -10,10 +10,10 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 	try {
 		const headsOfState = await prisma.headOfState.findMany({
 			where: {
-				startDate: {
+				tookOffice: {
 					lte: req.query.date,
 				},
-				endDate: {
+				leftOffice: {
 					gte: req.query.date,
 				},
 			},
@@ -22,7 +22,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 			},
 		});
 		const datesAsStrings = headsOfState.map(x => {
-			return { ...x, startDate: x.startDate.toISOString(), endDate: x.endDate.toISOString() };
+			return { ...x, tookOffice: x.tookOffice.toISOString(), leftOffice: x.leftOffice.toISOString() };
 		});
 		res.status(200).json(datesAsStrings);
 	} catch (err) {
