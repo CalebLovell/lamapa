@@ -2,6 +2,8 @@ import { Country } from '@prisma/client';
 import { brazil } from './brazil';
 import { mexico } from './mexico';
 import { usa } from './usa';
+import { bolivia } from './bolivia';
+import { argentina } from './argentina';
 
 export const leanings = {
 	LEFT: 1,
@@ -42,7 +44,7 @@ export const countries: Country[] = [
 	{ id: 28, name: `Trinidad and Tobago` },
 ];
 
-export const raw = [...usa, ...mexico, ...brazil];
+export const raw = [...usa, ...mexico, ...brazil, ...bolivia, ...argentina];
 
 export const headsOfState = raw.map(x => {
 	const { tookOffice, leftOffice } = x;
