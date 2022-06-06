@@ -1,8 +1,10 @@
 import { HeadOfState } from '@prisma/client';
 
+const countryId = 16;
+
 export const peru: Omit<HeadOfState, `id`>[] = [
 	{
-		countryId: 16,
+		countryId,
 		name: `Pedro Castillo`,
 		tookOffice: new Date(`28 July 2021`),
 		leftOffice: new Date(`28 July 2021`),
@@ -10,7 +12,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Francisco Sagasti`,
 		tookOffice: new Date(`17 November 2020`),
 		leftOffice: new Date(`28 July 2021`),
@@ -18,7 +20,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Manuel Merino`,
 		tookOffice: new Date(`10 November 2020`),
 		leftOffice: new Date(`15 November 2020`),
@@ -26,7 +28,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Martín Vizcarra`,
 		tookOffice: new Date(`23 March 2018`),
 		leftOffice: new Date(`9 November 2020`),
@@ -34,7 +36,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Pedro Pablo Kuczynski Godard`,
 		tookOffice: new Date(`July 28, 2018`),
 		leftOffice: new Date(`March 21, 2018`),
@@ -42,7 +44,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Ollanta Humala`,
 		tookOffice: new Date(`July 28,  2011`),
 		leftOffice: new Date(`July 28, 2016`),
@@ -50,7 +52,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Alan García`,
 		tookOffice: new Date(`28 July 2006`),
 		leftOffice: new Date(`28 July 2011`),
@@ -58,7 +60,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Alejandro Toledo`,
 		tookOffice: new Date(`28 July 2001`),
 		leftOffice: new Date(`28 July 2006`),
@@ -66,7 +68,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Valentín Paniagua`,
 		tookOffice: new Date(`22 November 2000`),
 		leftOffice: new Date(`28 July 2001`),
@@ -74,7 +76,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Alberto Fujimori`,
 		tookOffice: new Date(`28 July 1990`),
 		leftOffice: new Date(`22 November 2000`),
@@ -82,7 +84,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Alan García`,
 		tookOffice: new Date(`28 July 1985`),
 		leftOffice: new Date(`28 July 1990`),
@@ -90,7 +92,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Fernando Belaúnde Terry`,
 		tookOffice: new Date(`28 July 1980`),
 		leftOffice: new Date(`28 July 1985`),
@@ -98,7 +100,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Francisco Morales Bermúdez`,
 		tookOffice: new Date(`30 August 1975`),
 		leftOffice: new Date(`28 July 1980`),
@@ -106,7 +108,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Juan Velasco Alvarado`,
 		tookOffice: new Date(`3 October 1968`),
 		leftOffice: new Date(`30 August 1975`),
@@ -114,7 +116,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Fernando Belaúnde Terry`,
 		tookOffice: new Date(`28 July 1963`),
 		leftOffice: new Date(`3 October 1968`),
@@ -122,7 +124,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Nicolás Lindley`,
 		tookOffice: new Date(`3 March 1963`),
 		leftOffice: new Date(`28 July 1963`),
@@ -130,7 +132,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Ricardo Pérez Godoy`,
 		tookOffice: new Date(`18 July 1962`),
 		leftOffice: new Date(`3 March 1963`),
@@ -138,7 +140,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Manuel Prado`,
 		tookOffice: new Date(`28 July 1956`),
 		leftOffice: new Date(`18 July 1962`),
@@ -146,7 +148,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Manuel A. Odría`,
 		tookOffice: new Date(`28 July 1950`),
 		leftOffice: new Date(`28 July 1956`),
@@ -154,7 +156,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Zenón Noriega Agüero`,
 		tookOffice: new Date(`1 June 1950`),
 		leftOffice: new Date(`28 July 1950`),
@@ -162,7 +164,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Manuel A. Odría`,
 		tookOffice: new Date(`27 October 1948`),
 		leftOffice: new Date(`1 June 1950`),
@@ -170,7 +172,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `José Bustamante`,
 		tookOffice: new Date(`28 July 1945`),
 		leftOffice: new Date(`29 October 1948`),
@@ -178,7 +180,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Manuel Prado`,
 		tookOffice: new Date(`8 December 1939`),
 		leftOffice: new Date(`28 July 1945`),
@@ -186,7 +188,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Óscar R. Benavides`,
 		tookOffice: new Date(`30 April 1933`),
 		leftOffice: new Date(`8 December 1939`),
@@ -194,7 +196,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Luis Miguel Sánchez Cerro`,
 		tookOffice: new Date(`8 December 1931`),
 		leftOffice: new Date(`30 April 1933`),
@@ -202,7 +204,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `David Samanez Ocampo`,
 		tookOffice: new Date(`11 March 1931`),
 		leftOffice: new Date(`8 December 1931`),
@@ -210,7 +212,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Gustavo Jiménez`,
 		tookOffice: new Date(`5 March 1931`),
 		leftOffice: new Date(`11 March 1931`),
@@ -218,7 +220,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Ricardo Leoncio Elías Arias`,
 		tookOffice: new Date(`1 March 1931`),
 		leftOffice: new Date(`5 March 1931`),
@@ -226,7 +228,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Luis Miguel Sánchez Cerro`,
 		tookOffice: new Date(`27 August 1930`),
 		leftOffice: new Date(`1 March 1931`),
@@ -234,7 +236,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Manuel María Ponce Brousset`,
 		tookOffice: new Date(`25 August 1930`),
 		leftOffice: new Date(`27 August 1930`),
@@ -242,7 +244,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Augusto B. Leguía`,
 		tookOffice: new Date(`4 July 1919`),
 		leftOffice: new Date(`25 August 1930`),
@@ -250,7 +252,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `José Pardo`,
 		tookOffice: new Date(`18 August 1915`),
 		leftOffice: new Date(`4 July 1919`),
@@ -258,7 +260,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Óscar R. Benavides`,
 		tookOffice: new Date(`4 February 1914`),
 		leftOffice: new Date(`18 August 1915`),
@@ -266,7 +268,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Guillermo Billinghurst`,
 		tookOffice: new Date(`24 September 1912`),
 		leftOffice: new Date(`4 February 1914`),
@@ -274,7 +276,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Augusto B. Leguía`,
 		tookOffice: new Date(`24 September 1908`),
 		leftOffice: new Date(`24 September 1912`),
@@ -282,7 +284,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `José Pardo`,
 		tookOffice: new Date(`24 September 1904`),
 		leftOffice: new Date(`24 September 1908`),
@@ -290,7 +292,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Serapio Calderón`,
 		tookOffice: new Date(`7 May 1904`),
 		leftOffice: new Date(`24 September 1904`),
@@ -298,7 +300,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Manuel Candamo`,
 		tookOffice: new Date(`8 September 1903`),
 		leftOffice: new Date(`7 May 1904`),
@@ -306,7 +308,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Eduardo López de Romaña`,
 		tookOffice: new Date(`8 September 1899`),
 		leftOffice: new Date(`8 September 1903`),
@@ -314,7 +316,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Nicolás de Piérola`,
 		tookOffice: new Date(`8 September 1895`),
 		leftOffice: new Date(`8 September 1899`),
@@ -322,7 +324,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: `Manuel Candamo`,
 		tookOffice: new Date(`20 March 1895`),
 		leftOffice: new Date(`8 September 1895`),
@@ -330,7 +332,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: ` Andrés Avelino Cáceres`,
 		tookOffice: new Date(`10 August 1894`),
 		leftOffice: new Date(`20 March 1895`),
@@ -338,7 +340,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: ` Justiniano Borgoño Castañeda`,
 		tookOffice: new Date(`1 April 1894`),
 		leftOffice: new Date(`10 August 1894`),
@@ -346,7 +348,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: ` Remigio Morales Bermúdez`,
 		tookOffice: new Date(`10 August 1890`),
 		leftOffice: new Date(`1 April 1894`),
@@ -354,7 +356,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 16,
+		countryId,
 		name: ` Andrés Avelino Cáceres`,
 		tookOffice: new Date(`5 June 1886`),
 		leftOffice: new Date(`10 August 1890`),

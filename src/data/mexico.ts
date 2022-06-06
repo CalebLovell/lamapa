@@ -2,9 +2,11 @@ import { HeadOfState } from '@prisma/client';
 
 export const source = `https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Mexico`;
 
+const countryId = 2;
+
 export const mexico: Omit<HeadOfState, `id`>[] = [
 	{
-		countryId: 2,
+		countryId,
 		name: `Lázaro Cárdenas`,
 		party: `Institutional Revolutionary Party`,
 		leaning: 0,
@@ -12,7 +14,7 @@ export const mexico: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`30 November 1940`),
 	},
 	{
-		countryId: 2,
+		countryId,
 		name: `Manuel Ávila Camacho`,
 		party: `Institutional Revolutionary Party`,
 		leaning: 0,
@@ -20,7 +22,7 @@ export const mexico: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`30 November 1946`),
 	},
 	{
-		countryId: 2,
+		countryId,
 		name: `Miguel Alemán Valdés`,
 		party: `Institutional Revolutionary Party`,
 		leaning: 0,
@@ -28,7 +30,7 @@ export const mexico: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`30 November 1952`),
 	},
 	{
-		countryId: 2,
+		countryId,
 		name: `Adolfo Ruiz Cortines`,
 		party: `Institutional Revolutionary Party`,
 		leaning: 0,
@@ -36,7 +38,7 @@ export const mexico: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`30 November 1958`),
 	},
 	{
-		countryId: 2,
+		countryId,
 		name: `Adolfo López Mateos`,
 		party: `Institutional Revolutionary Party`,
 		leaning: 0,
@@ -44,7 +46,7 @@ export const mexico: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`30 November 1964`),
 	},
 	{
-		countryId: 2,
+		countryId,
 		name: `Gustavo Díaz Ordaz`,
 		party: `Institutional Revolutionary Party`,
 		leaning: 0,
@@ -52,7 +54,7 @@ export const mexico: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`30 November 1970`),
 	},
 	{
-		countryId: 2,
+		countryId,
 		name: `Luis Echeverría Álvarez`,
 		party: `Institutional Revolutionary Party`,
 		leaning: 0,
@@ -60,7 +62,7 @@ export const mexico: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`30 November 1976`),
 	},
 	{
-		countryId: 2,
+		countryId,
 		name: `Lopez Portillo`,
 		party: `Institutional Revolutionary Party`,
 		leaning: 0,
@@ -68,7 +70,7 @@ export const mexico: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`30 November 1982`),
 	},
 	{
-		countryId: 2,
+		countryId,
 		name: `Miguel de la Madrid`,
 		party: `Institutional Revolutionary Party`,
 		leaning: 0,
@@ -76,7 +78,7 @@ export const mexico: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`30 November 1988`),
 	},
 	{
-		countryId: 2,
+		countryId,
 		name: `Carlos Salinas de Gortari`,
 		party: `Institutional Revolutionary Party`,
 		leaning: 0,
@@ -84,7 +86,7 @@ export const mexico: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`30 November 1994`),
 	},
 	{
-		countryId: 2,
+		countryId,
 		name: `Ernesto Zedillo Ponce de Leon`,
 		party: `Institutional Revolutionary Party`,
 		leaning: 0,
@@ -92,7 +94,7 @@ export const mexico: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`30 November 2000`),
 	},
 	{
-		countryId: 2,
+		countryId,
 		name: `Vicente Fox`,
 		party: `National Action Party`,
 		leaning: 0,
@@ -100,7 +102,7 @@ export const mexico: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`30 November 2006`),
 	},
 	{
-		countryId: 2,
+		countryId,
 		name: `Felipe Calderon`,
 		party: `National Action Party`,
 		leaning: 0,
@@ -108,7 +110,7 @@ export const mexico: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`30 November 2012`),
 	},
 	{
-		countryId: 2,
+		countryId,
 		name: `Enrique Pena Nieto`,
 		party: `Institutional Revolutionary Party`,
 		leaning: 0,
@@ -116,7 +118,7 @@ export const mexico: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`30 November 2018`),
 	},
 	{
-		countryId: 2,
+		countryId,
 		name: `Andrés Manuel López Obrador`,
 		party: `National Regeneration Movement`,
 		leaning: 0,

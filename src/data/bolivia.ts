@@ -2,9 +2,11 @@ import { HeadOfState } from '@prisma/client';
 
 export const source = `https://en.wikipedia.org/wiki/List_of_presidents_of_Bolivia`;
 
+const countryId = 17;
+
 export const bolivia: Omit<HeadOfState, `id`>[] = [
 	{
-		countryId: 17,
+		countryId,
 		name: `José Manuel Pando`,
 		tookOffice: new Date(`25 October 1899`),
 		leftOffice: new Date(`14 August 1904`),
@@ -12,7 +14,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Ismael Montes`,
 		tookOffice: new Date(`14 August 1904`),
 		leftOffice: new Date(`12 August 1909`),
@@ -20,7 +22,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Eliodoro Villazón`,
 		tookOffice: new Date(`12 August 1909`),
 		leftOffice: new Date(`14 August 1913`),
@@ -28,7 +30,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Ismael Montes II`,
 		tookOffice: new Date(`14 August 1913`),
 		leftOffice: new Date(`15 August 1917`),
@@ -36,7 +38,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `José Gutiérrez Guerra`,
 		tookOffice: new Date(`15 August 1917`),
 		leftOffice: new Date(`12 July 1920`),
@@ -44,7 +46,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Military Junta - Bautista Saavedra, José María Escalier, José Manuel Ramírez`,
 		tookOffice: new Date(`13 July 1920`),
 		leftOffice: new Date(`16 July 1921`),
@@ -52,7 +54,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Military Junta - Bautista Saavedra, José María Escalier, José Manuel Ramírez, Juan José Fernández`,
 		tookOffice: new Date(`16 July 1920`),
 		leftOffice: new Date(`28 January 1921`),
@@ -60,7 +62,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Bautista Saavedra`,
 		tookOffice: new Date(`28 January 1921`),
 		leftOffice: new Date(`3 September 1925`),
@@ -68,7 +70,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Felipe Segundo Guzmán`,
 		tookOffice: new Date(`3 September 1925`),
 		leftOffice: new Date(`10 January 1926`),
@@ -76,7 +78,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Hernando Siles Reyes`,
 		tookOffice: new Date(`10 January 1926`),
 		leftOffice: new Date(`28 May 1930`),
@@ -84,7 +86,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Council of Ministers`,
 		tookOffice: new Date(`28 May 1930`),
 		leftOffice: new Date(`28 June 1930`),
@@ -92,7 +94,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Carlos Blanco Galindo`,
 		tookOffice: new Date(`28 June 1930`),
 		leftOffice: new Date(`5 March 1931`),
@@ -100,7 +102,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Daniel Salamanca`,
 		tookOffice: new Date(`5 March 1931`),
 		leftOffice: new Date(`28 November 1934`),
@@ -108,7 +110,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `José Luis Tejada Sorzano`,
 		tookOffice: new Date(`28 November 1934`),
 		leftOffice: new Date(`17 May 1936`),
@@ -116,7 +118,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Germán Busch`,
 		tookOffice: new Date(`17 May 1936`),
 		leftOffice: new Date(`22 May 1936`),
@@ -124,7 +126,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `David Toro`,
 		tookOffice: new Date(`22 May 1936`),
 		leftOffice: new Date(`13 July 1937`),
@@ -132,7 +134,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Germán Busch`,
 		tookOffice: new Date(`13 July 1937`),
 		leftOffice: new Date(`23 August 1939`),
@@ -140,7 +142,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Carlos Quintanilla`,
 		tookOffice: new Date(`23 August 1939`),
 		leftOffice: new Date(`15 April 1940`),
@@ -148,7 +150,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Enrique Peñaranda`,
 		tookOffice: new Date(`15 April 1940`),
 		leftOffice: new Date(`20 December 1943`),
@@ -156,7 +158,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Gualberto Villarroel`,
 		tookOffice: new Date(`20 December 1943`),
 		leftOffice: new Date(`21 July 1946`),
@@ -164,7 +166,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Dámaso Arenas`,
 		tookOffice: new Date(`21 July 1946`),
 		leftOffice: new Date(`21 July 1946`),
@@ -172,7 +174,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Néstor Guillén`,
 		tookOffice: new Date(`21 July 1946`),
 		leftOffice: new Date(`17 August 1946`),
@@ -180,7 +182,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Tomás Monje`,
 		tookOffice: new Date(`17 August 1946`),
 		leftOffice: new Date(`10 March 1947`),
@@ -188,7 +190,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Enrique Hertzog`,
 		tookOffice: new Date(`10 March 1947`),
 		leftOffice: new Date(`7 May 1949`),
@@ -196,7 +198,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Mamerto Urriolagoitía`,
 		tookOffice: new Date(`7 May 1949`),
 		leftOffice: new Date(`16 May 1951`),
@@ -204,7 +206,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Hugo Ballivián`,
 		tookOffice: new Date(`16 May 1951`),
 		leftOffice: new Date(`11 April 1952`),
@@ -212,7 +214,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Hernán Siles Zuazo`,
 		tookOffice: new Date(`11 April 1952`),
 		leftOffice: new Date(`15 April 1952`),
@@ -220,7 +222,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Víctor Paz Estenssoro I`,
 		tookOffice: new Date(`15 April 1952`),
 		leftOffice: new Date(`6 August 1956`),
@@ -228,7 +230,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Hernán Siles Zuazo`,
 		tookOffice: new Date(`6 August 1956`),
 		leftOffice: new Date(`6 August 1960`),
@@ -236,7 +238,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Víctor Paz Estenssoro II`,
 		tookOffice: new Date(`6 August 1960`),
 		leftOffice: new Date(`4 November 1964`),
@@ -244,7 +246,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Military Junta - René Barrientos, Alfredo Ovando Candía, René Barrientos, Alfredo Ovando Candía`,
 		tookOffice: new Date(`4 November 1964`),
 		leftOffice: new Date(`5 November 1964`),
@@ -252,7 +254,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `René Barrientos`,
 		tookOffice: new Date(`5 November 1964`),
 		leftOffice: new Date(`2 January 1966`),
@@ -260,7 +262,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Alfredo Ovando Candía`,
 		tookOffice: new Date(`2 January 1966`),
 		leftOffice: new Date(`6 August 1966`),
@@ -268,7 +270,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `René Barrientos`,
 		tookOffice: new Date(`6 August 1966`),
 		leftOffice: new Date(`27 April 1969`),
@@ -276,7 +278,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Luis Adolfo Siles Salinas`,
 		tookOffice: new Date(`27 April 1969`),
 		leftOffice: new Date(`26 September 1969`),
@@ -284,7 +286,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Alfredo Ovando Candía`,
 		tookOffice: new Date(`26 September 1969`),
 		leftOffice: new Date(`6 October 1970`),
@@ -292,7 +294,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Rogelio Miranda`,
 		tookOffice: new Date(`6 October 1970`),
 		leftOffice: new Date(`6 October 1970`),
@@ -300,7 +302,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Military Junta - Efraín Guachalla, Alberto Albarracín, Fernando Sattori`,
 		tookOffice: new Date(`6 October 1970`),
 		leftOffice: new Date(`7 October 1970`),
@@ -308,7 +310,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Juan José Torres`,
 		tookOffice: new Date(`7 October 1970`),
 		leftOffice: new Date(`21 August 1971`),
@@ -316,7 +318,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Military Junta - Hugo Banzer, Andrés Selich Chop, Jaime Florentino Mendieta`,
 		tookOffice: new Date(`21 August 1971`),
 		leftOffice: new Date(`22 August 1971`),
@@ -324,7 +326,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Hugo Banzer I`,
 		tookOffice: new Date(`22 August 1971`),
 		leftOffice: new Date(`20 July 1978`),
@@ -332,7 +334,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Military Junta - Víctor González Fuentes, Gutenberg Barroso, Alfonso Villalpando`,
 		tookOffice: new Date(`21 July 1978`),
 		leftOffice: new Date(`21 July 1978`),
@@ -340,7 +342,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Juan Pereda`,
 		tookOffice: new Date(`22 July 1978`),
 		leftOffice: new Date(`24 November 1978`),
@@ -348,7 +350,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `David Padilla`,
 		tookOffice: new Date(`24 November 1978`),
 		leftOffice: new Date(`8 August 1979`),
@@ -356,7 +358,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Wálter Guevara`,
 		tookOffice: new Date(`8 August 1979`),
 		leftOffice: new Date(`1 November 1979`),
@@ -364,7 +366,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Alberto Natusch`,
 		tookOffice: new Date(`1 November 1979`),
 		leftOffice: new Date(`16 November 1979`),
@@ -372,7 +374,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Lidia Gueiler`,
 		tookOffice: new Date(`16 November 1979`),
 		leftOffice: new Date(`17 July 1980`),
@@ -380,7 +382,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Military Junta - Luis García Meza, Ramiro Terrazas Rodríguez, Waldo Bernal Pereira`,
 		tookOffice: new Date(`17 July 1980`),
 		leftOffice: new Date(`18 July 1980`),
@@ -388,7 +390,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Luis García Meza`,
 		tookOffice: new Date(`18 July 1980`),
 		leftOffice: new Date(`4 August 1981`),
@@ -396,7 +398,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Military Junta - Celso Torrelio, Óscar Pammo Rodríguez, Waldo Bernal Pereira`,
 		tookOffice: new Date(`4 August 1981`),
 		leftOffice: new Date(`4 September 1981`),
@@ -404,7 +406,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Celso Torrelio`,
 		tookOffice: new Date(`4 September 1981`),
 		leftOffice: new Date(`19 July 1982`),
@@ -412,7 +414,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Military Junta - Ángel Mariscal, Natalio Morales, Óscar Pammo Rodríguez`,
 		tookOffice: new Date(`19 July 1981`),
 		leftOffice: new Date(`21 July 1981`),
@@ -420,7 +422,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Guido Vildoso`,
 		tookOffice: new Date(`21 July 1982`),
 		leftOffice: new Date(`10 October 1982`),
@@ -428,7 +430,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Hernán Siles Zuazo II`,
 		tookOffice: new Date(`10 October 1982`),
 		leftOffice: new Date(`6 August 1985`),
@@ -436,7 +438,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Víctor Paz Estenssoro III`,
 		tookOffice: new Date(`6 August 1985`),
 		leftOffice: new Date(`6 August 1989`),
@@ -444,7 +446,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Jaime Paz Zamora`,
 		tookOffice: new Date(`6 August 1989`),
 		leftOffice: new Date(`6 August 1993`),
@@ -452,7 +454,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Gonzalo Sánchez de Lozada I`,
 		tookOffice: new Date(`6 August 1993`),
 		leftOffice: new Date(`6 August 1997`),
@@ -460,7 +462,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Hugo Banzer`,
 		tookOffice: new Date(`6 August 1997`),
 		leftOffice: new Date(`7 August 2001`),
@@ -468,7 +470,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Jorge Quiroga`,
 		tookOffice: new Date(`7 August 2001`),
 		leftOffice: new Date(`6 August 2002`),
@@ -476,7 +478,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Gonzalo Sánchez de Lozada II`,
 		tookOffice: new Date(`6 August 2002`),
 		leftOffice: new Date(`17 October 2003`),
@@ -484,7 +486,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Carlos Diego Mesa Gisbert`,
 		tookOffice: new Date(`17 October 2003`),
 		leftOffice: new Date(`9 June 2005`),
@@ -492,7 +494,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Eduardo Rodríguez Veltzé`,
 		tookOffice: new Date(`9 June 2005`),
 		leftOffice: new Date(`22 January 2006`),
@@ -500,7 +502,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Evo Morales`,
 		tookOffice: new Date(`22 January 2006`),
 		leftOffice: new Date(`12 November 2019`),
@@ -508,7 +510,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Jeanine Áñez`,
 		tookOffice: new Date(`12 November 2019`),
 		leftOffice: new Date(`8 November 2020`),
@@ -516,7 +518,7 @@ export const bolivia: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 17,
+		countryId,
 		name: `Luis Arce`,
 		tookOffice: new Date(`8 November 2020`),
 		leftOffice: new Date(),

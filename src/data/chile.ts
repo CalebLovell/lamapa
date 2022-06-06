@@ -2,9 +2,11 @@ import { HeadOfState } from '@prisma/client';
 
 export const source = `https://en.wikipedia.org/wiki/List_of_presidents_of_Chile`;
 
+const countryId = 22;
+
 export const chile: Omit<HeadOfState, `id`>[] = [
 	{
-		countryId: 22,
+		countryId,
 		name: `Bartolomé Blanche`,
 		tookOffice: new Date(`13 September 1932`),
 		leftOffice: new Date(`2 October 1932`),
@@ -12,7 +14,7 @@ export const chile: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 22,
+		countryId,
 		name: `Abraham Oyanedel`,
 		tookOffice: new Date(`2 October 1932`),
 		leftOffice: new Date(`24 December 1932`),
@@ -20,7 +22,7 @@ export const chile: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 22,
+		countryId,
 		name: `Arturo Alessandri`,
 		tookOffice: new Date(`24 December 1932`),
 		leftOffice: new Date(`24 December 1938`),
@@ -28,7 +30,7 @@ export const chile: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 22,
+		countryId,
 		name: `Pedro Aguirre Cerda`,
 		tookOffice: new Date(`24 December 1938`),
 		leftOffice: new Date(`25 November 1941`),
@@ -36,7 +38,7 @@ export const chile: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 22,
+		countryId,
 		name: `Jerónimo Méndez`,
 		tookOffice: new Date(`25 November 1941`),
 		leftOffice: new Date(`2 April 1942`),
@@ -44,7 +46,7 @@ export const chile: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 22,
+		countryId,
 		name: `Juan Antonio Ríos`,
 		tookOffice: new Date(`2 April 1942`),
 		leftOffice: new Date(`27 June 1946`),
@@ -52,7 +54,7 @@ export const chile: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 22,
+		countryId,
 		name: `Alfredo Duhalde`,
 		tookOffice: new Date(`27 June 1946`),
 		leftOffice: new Date(`3 August 1946`),
@@ -60,7 +62,7 @@ export const chile: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 22,
+		countryId,
 		name: `Vicente Merino`,
 		tookOffice: new Date(`3 August 1946`),
 		leftOffice: new Date(`13 August 1946`),
@@ -68,7 +70,7 @@ export const chile: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 22,
+		countryId,
 		name: `Alfredo Duhalde`,
 		tookOffice: new Date(`13 August 1946`),
 		leftOffice: new Date(`17 October 1946`),
@@ -76,7 +78,7 @@ export const chile: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 22,
+		countryId,
 		name: `Juan Antonio Iribarren`,
 		tookOffice: new Date(`17 October 1946`),
 		leftOffice: new Date(`3 November 1946`),
@@ -84,7 +86,7 @@ export const chile: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 22,
+		countryId,
 		name: `Gabriel González Videla`,
 		tookOffice: new Date(`3 November 1946`),
 		leftOffice: new Date(`3 November 1952`),
@@ -92,7 +94,7 @@ export const chile: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 22,
+		countryId,
 		name: `Carlos Ibáñez del Campo`,
 		tookOffice: new Date(`3 November 1952`),
 		leftOffice: new Date(`3 November 1958`),
@@ -100,7 +102,7 @@ export const chile: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 22,
+		countryId,
 		name: `Jorge Alessandri`,
 		tookOffice: new Date(`3 November 1958`),
 		leftOffice: new Date(`3 November 1964`),
@@ -108,7 +110,7 @@ export const chile: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 22,
+		countryId,
 		name: `Eduardo Frei Montalva`,
 		tookOffice: new Date(`3 November 1964`),
 		leftOffice: new Date(`3 November 1970`),
@@ -116,7 +118,7 @@ export const chile: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 22,
+		countryId,
 		name: `Salvador Allende`,
 		tookOffice: new Date(`3 November 1970`),
 		leftOffice: new Date(`11 September 1973`),
@@ -124,7 +126,7 @@ export const chile: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 22,
+		countryId,
 		name: `Augusto Pinochet`,
 		tookOffice: new Date(`11 September 1973`),
 		leftOffice: new Date(`17 June 1974`),
@@ -132,7 +134,7 @@ export const chile: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 22,
+		countryId,
 		name: `Patricio Aylwin`,
 		tookOffice: new Date(`11 March 1990`),
 		leftOffice: new Date(`11 March 1994`),
@@ -140,7 +142,7 @@ export const chile: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 22,
+		countryId,
 		name: `Eduardo Frei Ruiz-Taglemall>`,
 		tookOffice: new Date(`11 March 1994`),
 		leftOffice: new Date(`11 March 2000`),
@@ -148,7 +150,7 @@ export const chile: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 22,
+		countryId,
 		name: `Ricardo Lagosmall>`,
 		tookOffice: new Date(`11 March 2000`),
 		leftOffice: new Date(`11 March 2006`),
@@ -156,7 +158,7 @@ export const chile: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 22,
+		countryId,
 		name: `Michelle Bacheletmall>`,
 		tookOffice: new Date(`11 March 2006`),
 		leftOffice: new Date(`11 March 2010`),
@@ -164,7 +166,7 @@ export const chile: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 22,
+		countryId,
 		name: `Sebastián Piñeramall>`,
 		tookOffice: new Date(`11 March 2010`),
 		leftOffice: new Date(`11 March 2014`),
@@ -172,7 +174,7 @@ export const chile: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 22,
+		countryId,
 		name: `Michelle Bacheletmall>`,
 		tookOffice: new Date(`11 March 2014`),
 		leftOffice: new Date(`11 March 2018`),
@@ -180,7 +182,7 @@ export const chile: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 22,
+		countryId,
 		name: `Sebastián Piñeramall>`,
 		tookOffice: new Date(`11 March 2018`),
 		leftOffice: new Date(`11 March 2022`),
@@ -188,7 +190,7 @@ export const chile: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 22,
+		countryId,
 		name: `Gabriel Boricmall>`,
 		tookOffice: new Date(`11 March 2022`),
 		leftOffice: new Date(),

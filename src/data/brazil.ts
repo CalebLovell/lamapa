@@ -2,9 +2,11 @@ import { HeadOfState } from '@prisma/client';
 
 export const source = `https://en.wikipedia.org/wiki/List_of_presidents_of_Brazil`;
 
+const countryId = 19;
+
 export const brazil: Omit<HeadOfState, `id`>[] = [
 	{
-		countryId: 19,
+		countryId,
 		name: `Dom Pedro I`,
 		party: `Empire of Brazil`,
 		leaning: 0,
@@ -12,7 +14,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`7 April 1831`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Dom Pedro II`,
 		party: `Empire of Brazil`,
 		leaning: 0,
@@ -20,7 +22,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`15 November 1889`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Deodoro da Fonseca`,
 		party: `None military`,
 		leaning: 0,
@@ -28,7 +30,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`23 November 1891`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Floriano Peixoto`,
 		party: `None military`,
 		leaning: 0,
@@ -36,7 +38,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`14 November 1894`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Prudente de Morais`,
 		party: `Federal Republican Party Brazil`,
 		leaning: 0,
@@ -44,7 +46,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`14 November 1898`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Manuel Ferraz de Campos Sales`,
 		party: `Republican Party of São Paulo`,
 		leaning: 0,
@@ -52,7 +54,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`14 November 1902`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Francisco de Paula Rodrigues Alves`,
 		party: `Republican Party of São Paulo`,
 		leaning: 0,
@@ -60,7 +62,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`14 November 1906`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Afonso Pena`,
 		party: `Mineiro Republican Party`,
 		leaning: 0,
@@ -68,7 +70,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`14 June 1909`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Nilo Peçanha`,
 		party: `Rio Republican Party`,
 		leaning: 0,
@@ -76,7 +78,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`14 November 1910`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Hermes da Fonseca`,
 		party: `Conservative Republican Party ,`,
 		leaning: 0,
@@ -84,7 +86,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`14 November 1914`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Venceslau Brás`,
 		party: `Mineiro Republican Party`,
 		leaning: 0,
@@ -92,7 +94,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`14 November 1918`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Delfim Moreira`,
 		party: `Mineiro Republican Party`,
 		leaning: 0,
@@ -100,7 +102,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`28 July 1919`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Epitacio Pessoa`,
 		party: `Mineiro Republican Party`,
 		leaning: 0,
@@ -108,7 +110,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`14 November 1922`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Artur Bernardes`,
 		party: `Mineiro Republican Party`,
 		leaning: 0,
@@ -116,7 +118,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`14 November 1926`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Washington Luís `,
 		party: `Republican Party of São Paulo`,
 		leaning: 0,
@@ -124,7 +126,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`24 October 1930`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Augusto Tasso Fragoso, Isaías de Noronha, João de Deus Mena Barreto`,
 		party: `None Brazilian Military Junta of 1930`,
 		leaning: 0,
@@ -132,7 +134,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`3 November 1930`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Getulio Vargas`,
 		party: `None`,
 		leaning: 0,
@@ -140,7 +142,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`29 October 1945`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `José Linhares`,
 		party: `None`,
 		leaning: 0,
@@ -148,7 +150,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`30 January 1946`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Eurico Gaspar Dutra`,
 		party: `Social Democratic Party Brazil, 1945–65`,
 		leaning: 0,
@@ -156,7 +158,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`30 January 1951`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Getúlio Vargas`,
 		party: `Brazilian Labour Party historical`,
 		leaning: 0,
@@ -164,7 +166,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`24 August 1954`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `João Café Filho`,
 		party: `Social Progressive Party`,
 		leaning: 0,
@@ -172,7 +174,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`8 November 1955`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Carlos Luz`,
 		party: `Social Democratic Party Brazil, 1945–65`,
 		leaning: 0,
@@ -180,7 +182,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`11 November 1955`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Nereu Ramos`,
 		party: `Social Democratic Party Brazil, 1945–65`,
 		leaning: 0,
@@ -188,7 +190,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`30 January 1956`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Juscelino Kubitschek`,
 		party: `Social Democratic Party Brazil, 1945–65`,
 		leaning: 0,
@@ -196,7 +198,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`30 January 1961`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Jânio Quadros`,
 		party: `Podemos Brazil`,
 		leaning: 0,
@@ -204,7 +206,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`25 August 1961`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Pascoal Ranieri Mazzilli`,
 		party: `Social Democratic Party Brazil, 1945–65`,
 		leaning: 0,
@@ -212,7 +214,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`7 September 1961`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `João Goulart`,
 		party: `Brazilian Labour Party historical`,
 		leaning: 0,
@@ -220,7 +222,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`1 April 1964`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Pascoal Ranieri Mazzilli`,
 		party: `Social Democratic Party Brazil, 1945-65`,
 		leaning: 0,
@@ -228,7 +230,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`14 April 1964`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Alencar Castelo Branco`,
 		party: `National Renewal Alliance,military`,
 		leaning: 0,
@@ -236,7 +238,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`14 March 1967`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Artur da Costa e Silva`,
 		party: `National Renewal Alliance,military`,
 		leaning: 0,
@@ -244,7 +246,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`31 August 1969`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Augusto Hamann Rademaker Grünewald, Aurélio de Lira Tavares, Márcio Melo`,
 		party: `None,Brazilian Military Junta of 1969`,
 		leaning: 0,
@@ -252,7 +254,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`30 October 1969`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Emílio Garrastazu Médici`,
 		party: `National Renewal Alliance,military`,
 		leaning: 0,
@@ -260,7 +262,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`14 March 1974`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Ernesto Geisel`,
 		party: `National Renewal Alliance,military`,
 		leaning: 0,
@@ -268,7 +270,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`14 March 1979`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `João Figueiredo`,
 		party: `Democratic Social Party PDS,military`,
 		leaning: 0,
@@ -276,7 +278,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`14 March 1985`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `José Sarney`,
 		party: `Brazilian Democratic Movement`,
 		leaning: 0,
@@ -284,7 +286,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`14 March 1990`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Fernando Collor de Mello`,
 		party: `Christian Labour Party`,
 		leaning: 0,
@@ -292,7 +294,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`2 October 1992`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Itamar Augusto Cautiero Franco`,
 		party: `Brazilian Democratic Movement`,
 		leaning: 0,
@@ -300,7 +302,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`31 December 1994`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Fernando Henrique Cardoso`,
 		party: `Brazilian Social Democracy Party`,
 		leaning: 0,
@@ -308,7 +310,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`31 December 2002`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Luiz Inácio Lula da Silva`,
 		party: `Workers' Party Brazil`,
 		leaning: 0,
@@ -316,7 +318,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`31 December 2010`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Dilma Rousseff`,
 		party: `Workers' Party Brazil`,
 		leaning: 0,
@@ -324,7 +326,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`12 May 2016`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Michel Temer`,
 		party: `Brazilian Democratic Movement`,
 		leaning: 0,
@@ -332,7 +334,7 @@ export const brazil: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(`31 December 2018`),
 	},
 	{
-		countryId: 19,
+		countryId,
 		name: `Jair Bolsonaro`,
 		party: `Social Liberal Party Brazil`,
 		leaning: 0,

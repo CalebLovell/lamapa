@@ -2,9 +2,11 @@ import { HeadOfState } from '@prisma/client';
 
 export const source = `https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Argentina`;
 
+const countryId = 20;
+
 export const argentina: Omit<HeadOfState, `id`>[] = [
 	{
-		countryId: 20,
+		countryId,
 		name: `Bartolomé Mitre`,
 		tookOffice: new Date(`12 December 1861`),
 		leftOffice: new Date(`12 October 1868`),
@@ -12,7 +14,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Domingo Faustino Sarmiento`,
 		tookOffice: new Date(`12 October 1868`),
 		leftOffice: new Date(`12 October 1874`),
@@ -20,7 +22,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Nicolás Avellaneda`,
 		tookOffice: new Date(`12 October 1874`),
 		leftOffice: new Date(`12 October 1880`),
@@ -28,7 +30,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Alejo Julio Argentino Roca`,
 		tookOffice: new Date(`12 October 1880`),
 		leftOffice: new Date(`12 October 1886`),
@@ -36,7 +38,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Miguel Ángel Juárez Celman`,
 		tookOffice: new Date(`12 October 1886`),
 		leftOffice: new Date(`6 August 1890`),
@@ -44,7 +46,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Carlos Pellegrini`,
 		tookOffice: new Date(`6 August 1890`),
 		leftOffice: new Date(`12 October 1892`),
@@ -52,7 +54,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Luis Sáenz Peña`,
 		tookOffice: new Date(`12 October 1892`),
 		leftOffice: new Date(`22 January 1895`),
@@ -60,7 +62,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `José Evaristo Uriburu`,
 		tookOffice: new Date(`22 January 1895`),
 		leftOffice: new Date(`12 October 1898`),
@@ -68,7 +70,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Julio Argentino Roca`,
 		tookOffice: new Date(`12 October 1898`),
 		leftOffice: new Date(`12 October 1904`),
@@ -76,7 +78,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Manuel Quintana`,
 		tookOffice: new Date(`12 October 1904`),
 		leftOffice: new Date(`12 March 1906`),
@@ -84,7 +86,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `José Figueroa Alcorta`,
 		tookOffice: new Date(`12 March 1906`),
 		leftOffice: new Date(`12 October 1910`),
@@ -92,7 +94,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Roque Sáenz Peña`,
 		tookOffice: new Date(`12 October 1910`),
 		leftOffice: new Date(`9 August 1914`),
@@ -100,7 +102,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Victorino de la Plaza`,
 		tookOffice: new Date(`9 August 1914`),
 		leftOffice: new Date(`12 October 1916`),
@@ -108,7 +110,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Hipólito Yrigoyen`,
 		tookOffice: new Date(`12 October 1916`),
 		leftOffice: new Date(`12 October 1922`),
@@ -116,7 +118,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Marcelo Torcuato de Alvear`,
 		tookOffice: new Date(`12 October 1922`),
 		leftOffice: new Date(`12 October 1928`),
@@ -124,7 +126,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Hipólito Yrigoyen`,
 		tookOffice: new Date(`12 October 1928`),
 		leftOffice: new Date(`6 September 1930`),
@@ -132,7 +134,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `José Félix Uriburu`,
 		tookOffice: new Date(`6 September 1930`),
 		leftOffice: new Date(`20 February 1932`),
@@ -140,7 +142,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Agustín Pedro Justo`,
 		tookOffice: new Date(`20 February 1932`),
 		leftOffice: new Date(`20 February 1938`),
@@ -148,7 +150,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Roberto María Ortiz`,
 		tookOffice: new Date(`20 February 1938`),
 		leftOffice: new Date(`27 June 1942`),
@@ -156,7 +158,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Ramón Castillo`,
 		tookOffice: new Date(`27 June 1942`),
 		leftOffice: new Date(`4 June 1943`),
@@ -164,7 +166,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Arturo Franklin Rawson`,
 		tookOffice: new Date(`4 June 1943`),
 		leftOffice: new Date(`7 June 1943`),
@@ -172,7 +174,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Pedro Pablo Ramírez`,
 		tookOffice: new Date(`7 June 1943`),
 		leftOffice: new Date(`9 March 1944`),
@@ -180,7 +182,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Edelmiro Julián Farrell`,
 		tookOffice: new Date(`9 March 1944`),
 		leftOffice: new Date(`4 June 1946`),
@@ -188,7 +190,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Juan Perón`,
 		tookOffice: new Date(`4 June 1946`),
 		leftOffice: new Date(`19 September 1955`),
@@ -196,7 +198,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Eduardo Lonardi`,
 		tookOffice: new Date(`19 September 1955`),
 		leftOffice: new Date(`13 November 1955`),
@@ -205,7 +207,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 	},
 
 	{
-		countryId: 20,
+		countryId,
 		name: `Pedro Eugenio Aramburu`,
 		tookOffice: new Date(`13 November 1955`),
 		leftOffice: new Date(`1 May 1958`),
@@ -213,7 +215,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Arturo Frondizi`,
 		tookOffice: new Date(`1 May 1958`),
 		leftOffice: new Date(`29 March 1962`),
@@ -221,7 +223,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `José María Guido`,
 		tookOffice: new Date(`29 March 1962`),
 		leftOffice: new Date(`12 October 1963`),
@@ -229,7 +231,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Arturo Umberto Illia`,
 		tookOffice: new Date(`12 October 1963`),
 		leftOffice: new Date(`28 June 1966`),
@@ -237,7 +239,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Junta of Commanders of the Armed Forces - Pascual Pistarini, Benigno Ignacio Varela, Adolfo Teodoro Álvarez`,
 		tookOffice: new Date(`28 June 1966`),
 		leftOffice: new Date(`29 June 1966`),
@@ -245,7 +247,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Juan Carlos Onganía`,
 		tookOffice: new Date(`29 June 1966`),
 		leftOffice: new Date(`8 June 1970`),
@@ -253,7 +255,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Junta of Commanders of the Armed Forces - Pedro Alberto José Gnavi, Alejandro Agustín Lanusse, Carlos Alberto Rey`,
 		tookOffice: new Date(`8 June 1970`),
 		leftOffice: new Date(`18 June 1970`),
@@ -261,7 +263,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Roberto M. Levingston`,
 		tookOffice: new Date(`18 June 1970`),
 		leftOffice: new Date(`23 March 1971`),
@@ -269,7 +271,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Junta of Commanders of the Armed Forces - Alejandro Agustín Lanusse, Pedro Alberto José Gnavi, Carlos Alberto Rey`,
 		tookOffice: new Date(`23 March 1971`),
 		leftOffice: new Date(`26 March 1971`),
@@ -277,7 +279,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Alejandro Agustín Lanusse`,
 		tookOffice: new Date(`26 March 1971`),
 		leftOffice: new Date(`25 May 1973`),
@@ -285,7 +287,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Héctor José Cámpora`,
 		tookOffice: new Date(`25 May 1973`),
 		leftOffice: new Date(`13 July 1973`),
@@ -293,7 +295,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Raúl Alberto Lastiri`,
 		tookOffice: new Date(`13 July 1973`),
 		leftOffice: new Date(`12 October 1973`),
@@ -301,7 +303,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Juan Perón`,
 		tookOffice: new Date(`12 October 1973`),
 		leftOffice: new Date(`1 July 1974`),
@@ -309,7 +311,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Isabel Perón`,
 		tookOffice: new Date(`29 June 1974`),
 		leftOffice: new Date(`24 March 1976`),
@@ -317,7 +319,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Military Junta - Jorge Rafael Videla, Emilio Eduardo Massera, Orlando Ramón Agosti`,
 		tookOffice: new Date(`24 March 1976`),
 		leftOffice: new Date(`29 March 1976`),
@@ -325,7 +327,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Jorge Rafael Videla`,
 		tookOffice: new Date(`29 March 1976`),
 		leftOffice: new Date(`29 March 1981`),
@@ -333,7 +335,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Roberto Eduardo Viola`,
 		tookOffice: new Date(`29 March 1981`),
 		leftOffice: new Date(`21 November 1981`),
@@ -341,7 +343,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Horacio Tomás Liendo`,
 		tookOffice: new Date(`21 November 1981`),
 		leftOffice: new Date(`11 December 1981`),
@@ -349,7 +351,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Carlos Lacoste`,
 		tookOffice: new Date(`11 December 1981`),
 		leftOffice: new Date(`22 December 1981`),
@@ -357,7 +359,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Leopoldo Galtieri`,
 		tookOffice: new Date(`22 December 1981`),
 		leftOffice: new Date(`18 June 1982`),
@@ -365,7 +367,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Alfredo Oscar Saint Jean`,
 		tookOffice: new Date(`18 June 1982`),
 		leftOffice: new Date(`1 July 1982`),
@@ -373,7 +375,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Reynaldo Bignone`,
 		tookOffice: new Date(`1 July 1982`),
 		leftOffice: new Date(`10 December 1983`),
@@ -381,7 +383,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Raúl Alfonsín`,
 		tookOffice: new Date(`10 December 1983`),
 		leftOffice: new Date(`8 July 1989`),
@@ -389,7 +391,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Carlos Saúl Menem Akil`,
 		tookOffice: new Date(`8 July 1989`),
 		leftOffice: new Date(`10 December 1999`),
@@ -397,7 +399,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Fernando de la Rúa`,
 		tookOffice: new Date(`10 December 1999`),
 		leftOffice: new Date(`20 December 2001`),
@@ -405,7 +407,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Ramón Puerta`,
 		tookOffice: new Date(`20 December 2001`),
 		leftOffice: new Date(`22 December 2001`),
@@ -413,7 +415,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Adolfo Rodríguez Saá`,
 		tookOffice: new Date(`22 December 2001`),
 		leftOffice: new Date(`30 December 2001`),
@@ -421,7 +423,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Eduardo Camaño`,
 		tookOffice: new Date(`30 December 2001`),
 		leftOffice: new Date(`2 January 2002`),
@@ -429,7 +431,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Eduardo Duhalde`,
 		tookOffice: new Date(`2 January 2002`),
 		leftOffice: new Date(`25 May 2003`),
@@ -437,7 +439,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Néstor Kirchner`,
 		tookOffice: new Date(`25 May 2003`),
 		leftOffice: new Date(`10 December 2007`),
@@ -445,7 +447,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Cristina Fernández de Kirchner`,
 		tookOffice: new Date(`10 December 2007`),
 		leftOffice: new Date(`10 December 2015`),
@@ -453,7 +455,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Mauricio Macri`,
 		tookOffice: new Date(`10 December 2015`),
 		leftOffice: new Date(`10 December 2019`),
@@ -461,7 +463,7 @@ export const argentina: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 20,
+		countryId,
 		name: `Alberto Fernández`,
 		tookOffice: new Date(`10 December 2019`),
 		leftOffice: new Date(),

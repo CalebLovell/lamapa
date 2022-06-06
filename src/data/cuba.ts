@@ -2,9 +2,11 @@ import { HeadOfState } from '@prisma/client';
 
 export const source = `https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Cuba`;
 
+const countryId = 24;
+
 export const cuba: Omit<HeadOfState, `id`>[] = [
 	{
-		countryId: 24,
+		countryId,
 		name: `Tomás Estrada Palma`,
 		tookOffice: new Date(`20 May 1902`),
 		leftOffice: new Date(`28 September 1906`),
@@ -12,7 +14,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `William H. Taft`,
 		tookOffice: new Date(`28 September 1906`),
 		leftOffice: new Date(`13 October 1906`),
@@ -20,7 +22,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `Charles Edward Magoon`,
 		tookOffice: new Date(`13 October 1906`),
 		leftOffice: new Date(`28 January 1909`),
@@ -28,7 +30,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `José Miguel Gómez`,
 		tookOffice: new Date(`28 January 1909`),
 		leftOffice: new Date(`20 May 1913`),
@@ -36,7 +38,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `Mario García Menocal`,
 		tookOffice: new Date(`20 May 1913`),
 		leftOffice: new Date(`20 May 1921`),
@@ -44,7 +46,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `Alfredo Zayas y Alfonso`,
 		tookOffice: new Date(`20 May 1921`),
 		leftOffice: new Date(`20 May 1925`),
@@ -52,7 +54,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `Gerardo Machado`,
 		tookOffice: new Date(`20 May 1925`),
 		leftOffice: new Date(`12 August 1933`),
@@ -60,7 +62,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `Alberto Herrera Franchi`,
 		tookOffice: new Date(`12 August 1933`),
 		leftOffice: new Date(`13 August 1933`),
@@ -68,7 +70,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `Carlos Manuel de Céspedes y Quesada`,
 		tookOffice: new Date(`13 August 1933`),
 		leftOffice: new Date(`5 September 1933`),
@@ -76,7 +78,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `Pentarchy of 1933`,
 		tookOffice: new Date(`5 September 1933`),
 		leftOffice: new Date(`10 September 1933`),
@@ -84,7 +86,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `Ramón Grau`,
 		tookOffice: new Date(`10 September 1933`),
 		leftOffice: new Date(`15 January 1934`),
@@ -92,7 +94,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `Carlos Hevia`,
 		tookOffice: new Date(`15 January 1934`),
 		leftOffice: new Date(`18 January 1934`),
@@ -100,7 +102,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `Manuel Márquez Sterling`,
 		tookOffice: new Date(`18 January 1934`),
 		leftOffice: new Date(`18 January 1934`),
@@ -108,7 +110,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `Carlos Mendieta`,
 		tookOffice: new Date(`18 January 1934`),
 		leftOffice: new Date(`11 December 1935`),
@@ -116,7 +118,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `José Agripino Barnet`,
 		tookOffice: new Date(`11 December 1935`),
 		leftOffice: new Date(`20 May 1936`),
@@ -124,7 +126,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `Miguel Mariano Gómez`,
 		tookOffice: new Date(`20 May 1936`),
 		leftOffice: new Date(`24 December 1936`),
@@ -132,7 +134,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `Federico Laredo Brú`,
 		tookOffice: new Date(`24 December 1936`),
 		leftOffice: new Date(`10 October 1940`),
@@ -140,7 +142,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `Fulgencio Batista`,
 		tookOffice: new Date(`10 October 1940`),
 		leftOffice: new Date(`10 October 1944`),
@@ -148,7 +150,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `Ramón Grau`,
 		tookOffice: new Date(`10 October 1944`),
 		leftOffice: new Date(`10 October 1948`),
@@ -156,7 +158,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `Carlos Prío Socarrás`,
 		tookOffice: new Date(`10 October 1948`),
 		leftOffice: new Date(`10 March 1952`),
@@ -164,7 +166,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `Fulgencio Batista`,
 		tookOffice: new Date(`10 March 1952`),
 		leftOffice: new Date(`14 August 1954`),
@@ -172,7 +174,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `Andrés Domingo del Castillo`,
 		tookOffice: new Date(`14 August 1954`),
 		leftOffice: new Date(`24 February 1955`),
@@ -180,7 +182,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `Fulgencio Batista`,
 		tookOffice: new Date(`24 February 1955`),
 		leftOffice: new Date(`1 January 1959`),
@@ -188,7 +190,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `Anselmo Alliegro y Milá`,
 		tookOffice: new Date(`1 January 1959`),
 		leftOffice: new Date(`2 January 1959`),
@@ -196,7 +198,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `Carlos Manuel Piedra`,
 		tookOffice: new Date(`2 January 1959`),
 		leftOffice: new Date(`3 January 1959`),
@@ -204,7 +206,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `Manuel Urrutia Lleó`,
 		tookOffice: new Date(`3 January 1959`),
 		leftOffice: new Date(`18 July 1959`),
@@ -212,7 +214,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `Osvaldo Dorticós Torrado`,
 		tookOffice: new Date(`18 July 1959`),
 		leftOffice: new Date(`2 December 1976`),
@@ -220,7 +222,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `Fidel Castro`,
 		tookOffice: new Date(`2 December 1976`),
 		leftOffice: new Date(`24 February 2008`),
@@ -228,7 +230,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `Raúl Castro`,
 		tookOffice: new Date(`24 February 2008`),
 		leftOffice: new Date(`19 April 2018`),
@@ -236,7 +238,7 @@ export const cuba: Omit<HeadOfState, `id`>[] = [
 		leaning: 0,
 	},
 	{
-		countryId: 24,
+		countryId,
 		name: `Miguel Díaz-Canel`,
 		tookOffice: new Date(`19 April 2018`),
 		leftOffice: new Date(),
