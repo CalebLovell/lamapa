@@ -23,6 +23,8 @@ import { trinidadAndTobago } from './trinidad-and-tobago';
 import { jamaica } from './jamaica';
 import { haiti } from './haiti';
 import { dominicanRepublic } from './dominican-republic';
+import { venezuela } from './venezuela';
+import { colombia } from './colombia';
 
 export const countries: Country[] = [
 	{ id: 1, name: `United States of America` },
@@ -58,14 +60,7 @@ export const countries: Country[] = [
 const raw = [
 	...usa,
 	...mexico,
-	...brazil,
-	...bolivia,
-	...argentina,
-	...cuba,
-	...peru,
-	...chile,
-	...paraguay,
-	...uruguay,
+
 	...guatemala,
 	...belize,
 	...elsalvador,
@@ -73,13 +68,27 @@ const raw = [
 	...nicaragua,
 	...costaRica,
 	...panama,
+
+	...colombia,
+	...venezuela,
 	...ecuador,
 	...guyana,
 	...suriname,
-	...trinidadAndTobago,
+
+	...peru,
+	...bolivia,
+
+	...brazil,
+	...argentina,
+	...chile,
+	...paraguay,
+	...uruguay,
+
+	...cuba,
 	...jamaica,
 	...haiti,
 	...dominicanRepublic,
+	...trinidadAndTobago,
 ];
 
 export const headsOfState = raw.map(x => {
