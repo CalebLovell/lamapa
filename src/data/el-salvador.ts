@@ -4,7 +4,7 @@ export const source = `https://www.mapsofworld.com/list-of/presidents-el-salvado
 
 const countryId = 5;
 
-export const elsalvador: Omit<HeadOfState, `id`>[] = [
+export const elSalvador: Omit<HeadOfState, `id`>[] = [
 	{
 		countryId,
 		name: `Nayib Armando Bukele Ortez`,

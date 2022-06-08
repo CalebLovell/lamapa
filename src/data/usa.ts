@@ -374,3 +374,7 @@ export const usa: Omit<HeadOfState, `id`>[] = [
 		leftOffice: new Date(),
 	},
 ];
+
+export const puertoRico = usa.map(x => {
+	return { ...x, countryId: 23 };
+});

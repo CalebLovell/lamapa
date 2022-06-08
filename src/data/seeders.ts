@@ -1,7 +1,7 @@
 import { Country } from '@prisma/client';
 import { brazil } from './brazil';
 import { mexico } from './mexico';
-import { usa } from './usa';
+import { puertoRico, usa } from './usa';
 import { bolivia } from './bolivia';
 import { argentina } from './argentina';
 import { peru } from './peru';
@@ -11,7 +11,7 @@ import { paraguay } from './paraguay';
 import { uruguay } from './uruguay';
 import { guatemala } from './guatemala';
 import { belize } from './belize';
-import { elsalvador } from './el-salvador';
+import { elSalvador } from './el-salvador';
 import { honduras } from './honduras';
 import { nicaragua } from './nicaragua';
 import { costaRica } from './costa-rica';
@@ -60,35 +60,31 @@ export const countries: Country[] = [
 const raw = [
 	...usa,
 	...mexico,
-
 	...guatemala,
 	...belize,
-	...elsalvador,
+	...elSalvador,
 	...honduras,
 	...nicaragua,
 	...costaRica,
 	...panama,
-
 	...colombia,
 	...venezuela,
 	...ecuador,
 	...guyana,
 	...suriname,
-
 	...peru,
 	...bolivia,
-
 	...brazil,
 	...argentina,
 	...chile,
 	...paraguay,
 	...uruguay,
-
 	...cuba,
 	...jamaica,
 	...haiti,
 	...dominicanRepublic,
 	...trinidadAndTobago,
+	...puertoRico,
 ];
 
 export const headsOfState = raw.map(x => {
