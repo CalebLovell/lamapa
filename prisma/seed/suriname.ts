@@ -1,10 +1,10 @@
-import { HeadOfState } from '@prisma/client';
+import { HeadOfStateNoId } from '../../src/data/types';
 
 export const source = `https://en.wikipedia.org/wiki/President_of_Suriname`;
 
 const countryId = 14;
 
-export const suriname: Omit<HeadOfState, `id`>[] = [
+export const suriname: HeadOfStateNoId[] = [
 	{
 		countryId,
 		name: `Johan Ferrier`,

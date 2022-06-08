@@ -1,10 +1,10 @@
-import { HeadOfState } from '@prisma/client';
+import { HeadOfStateNoId } from '../../src/data/types';
 
 export const source = `https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Haiti`;
 
 const countryId = 26;
 
-export const haiti: Omit<HeadOfState, `id`>[] = [
+export const haiti: HeadOfStateNoId[] = [
 	{
 		countryId,
 		name: `Toussaint Louverture`,

@@ -1,10 +1,10 @@
-import { HeadOfState } from '@prisma/client';
-
-const countryId = 18;
+import { HeadOfStateNoId } from '../../src/data/types';
 
 export const source = `https://www.mapsofworld.com/list-of/presidents-paraguay/`;
 
-export const paraguay: Omit<HeadOfState, `id`>[] = [
+const countryId = 18;
+
+export const paraguay: HeadOfStateNoId[] = [
 	{
 		countryId,
 		name: `Mario Abdo Benítez`,

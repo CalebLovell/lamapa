@@ -1,10 +1,10 @@
-import { HeadOfState } from '@prisma/client';
+import { HeadOfStateNoId } from '../../src/data/types';
 
 export const source = `https://www.mapsofworld.com/list-of/presidents-costa-rica/`;
 
 const countryId = 8;
 
-export const costaRica: Omit<HeadOfState, `id`>[] = [
+export const costaRica: HeadOfStateNoId[] = [
 	{
 		countryId,
 		name: `Carlos Alvarado Quesada`,

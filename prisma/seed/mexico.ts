@@ -1,10 +1,10 @@
-import { HeadOfState } from '@prisma/client';
+import { HeadOfStateNoId } from '../../src/data/types';
 
 export const source = `https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Mexico`;
 
 const countryId = 2;
 
-export const mexico: Omit<HeadOfState, `id`>[] = [
+export const mexico: HeadOfStateNoId[] = [
 	{
 		countryId,
 		name: `Lázaro Cárdenas`,

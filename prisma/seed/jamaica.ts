@@ -1,10 +1,10 @@
-import { HeadOfState } from '@prisma/client';
+import { HeadOfStateNoId } from '../../src/data/types';
 
 export const source = `https://en.wikipedia.org/wiki/Prime_Minister_of_Jamaica`;
 
 const countryId = 25;
 
-export const jamaica: Omit<HeadOfState, `id`>[] = [
+export const jamaica: HeadOfStateNoId[] = [
 	{
 		countryId,
 		name: `Sir Alexander Bustamante`,

@@ -1,10 +1,10 @@
-import { HeadOfState } from '@prisma/client';
+import { HeadOfStateNoId } from '../../src/data/types';
 
 export const source = `https://www.mapsofworld.com/list-of/presidents-colombia/`;
 
 const countryId = 10;
 
-export const colombia: Omit<HeadOfState, `id`>[] = [
+export const colombia: HeadOfStateNoId[] = [
 	{
 		countryId,
 		name: `Iván Duque Márquez`,

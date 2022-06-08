@@ -1,10 +1,10 @@
-import { HeadOfState } from '@prisma/client';
+import { HeadOfStateNoId } from '../../src/data/types';
 
 export const source = `https://www.mapsofworld.com/list-of/presidents-dominican-republic/`;
 
 const countryId = 27;
 
-export const dominicanRepublic: Omit<HeadOfState, `id`>[] = [
+export const dominicanRepublic: HeadOfStateNoId[] = [
 	{
 		countryId,
 		name: `Luis Abinader`,

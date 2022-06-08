@@ -1,10 +1,10 @@
-import { HeadOfState } from '@prisma/client';
+import { HeadOfStateNoId } from '../../src/data/types';
 
 export const source = `https://en.wikipedia.org/wiki/List_of_presidents_of_Chile`;
 
 const countryId = 22;
 
-export const chile: Omit<HeadOfState, `id`>[] = [
+export const chile: HeadOfStateNoId[] = [
 	{
 		countryId,
 		name: `Bartolomé Blanche`,

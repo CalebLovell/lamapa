@@ -1,10 +1,10 @@
-import { HeadOfState } from '@prisma/client';
+import { HeadOfStateNoId } from '../../src/data/types';
 
 export const source = `https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Trinidad_and_Tobago`;
 
 const countryId = 28;
 
-export const trinidadAndTobago: Omit<HeadOfState, `id`>[] = [
+export const trinidadAndTobago: HeadOfStateNoId[] = [
 	{
 		countryId,
 		name: `Sir Solomon Hochoy`,

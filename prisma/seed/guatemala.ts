@@ -1,10 +1,10 @@
-import { HeadOfState } from '@prisma/client';
+import { HeadOfStateNoId } from '../../src/data/types';
 
 export const source = `https://www.mapsofworld.com/list-of/presidents-guatemala/`;
 
 const countryId = 3;
 
-export const guatemala: Omit<HeadOfState, `id`>[] = [
+export const guatemala: HeadOfStateNoId[] = [
 	{
 		countryId,
 		name: `Alejandro Giammattei`,

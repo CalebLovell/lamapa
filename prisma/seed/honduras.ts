@@ -1,10 +1,10 @@
-import { HeadOfState } from '@prisma/client';
+import { HeadOfStateNoId } from '../../src/data/types';
 
 export const source = `https://www.mapsofworld.com/list-of/presidents-honduras/`;
 
 const countryId = 6;
 
-export const honduras: Omit<HeadOfState, `id`>[] = [
+export const honduras: HeadOfStateNoId[] = [
 	{
 		countryId,
 		name: `Xiomara Castro`,

@@ -1,10 +1,10 @@
-import { HeadOfState } from '@prisma/client';
+import { HeadOfStateNoId } from '../../src/data/types';
 
 export const source = `https://www.mapsofworld.com/list-of/presidents-el-salvador/`;
 
 const countryId = 5;
 
-export const elSalvador: Omit<HeadOfState, `id`>[] = [
+export const elSalvador: HeadOfStateNoId[] = [
 	{
 		countryId,
 		name: `Nayib Armando Bukele Ortez`,

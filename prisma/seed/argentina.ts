@@ -1,10 +1,10 @@
-import { HeadOfState } from '@prisma/client';
+import { HeadOfStateNoId } from '../../src/data/types';
 
 export const source = `https://en.wikipedia.org/wiki/List_of_heads_of_state_of_Argentina`;
 
 const countryId = 20;
 
-export const argentina: Omit<HeadOfState, `id`>[] = [
+export const argentina: HeadOfStateNoId[] = [
 	{
 		countryId,
 		name: `Bartolomé Mitre`,

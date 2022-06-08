@@ -1,10 +1,10 @@
-import { HeadOfState } from '@prisma/client';
+import { HeadOfStateNoId } from '../../src/data/types';
 
 export const source = `https://en.wikipedia.org/wiki/List_of_presidents_of_Brazil`;
 
 const countryId = 19;
 
-export const brazil: Omit<HeadOfState, `id`>[] = [
+export const brazil: HeadOfStateNoId[] = [
 	{
 		countryId,
 		name: `Dom Pedro I`,

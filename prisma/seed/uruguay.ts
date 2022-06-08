@@ -1,10 +1,10 @@
-import { HeadOfState } from '@prisma/client';
-
-const countryId = 21;
+import { HeadOfStateNoId } from "../../src/data/types";
 
 export const source = `https://www.mapsofworld.com/list-of/presidents-uruguay/`;
 
-export const uruguay: Omit<HeadOfState, `id`>[] = [
+const countryId = 21;
+
+export const uruguay: HeadOfStateNoId[] = [
 	{
 		countryId,
 		name: `Luis Lacalle Pou`,

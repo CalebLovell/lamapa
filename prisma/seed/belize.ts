@@ -1,10 +1,10 @@
-import { HeadOfState } from '@prisma/client';
+import { HeadOfStateNoId } from '../../src/data/types';
 
 export const source = `https://en.wikipedia.org/wiki/List_of_prime_ministers_of_Belize`;
 
 const countryId = 4;
 
-export const belize: Omit<HeadOfState, `id`>[] = [
+export const belize: HeadOfStateNoId[] = [
 	{
 		countryId,
 		name: `George Cadle Price`,

@@ -1,10 +1,10 @@
-import { HeadOfState } from '@prisma/client';
+import { HeadOfStateNoId } from '../../src/data/types';
 
 export const source = `https://en.wikipedia.org/wiki/List_of_presidents_of_Venezuela`;
 
 const countryId = 11;
 
-export const venezuela: Omit<HeadOfState, `id`>[] = [
+export const venezuela: HeadOfStateNoId[] = [
 	{
 		countryId,
 		name: `Juan Guaidó`,

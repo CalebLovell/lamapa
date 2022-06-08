@@ -1,13 +1,15 @@
-import { HeadOfState } from '@prisma/client';
+import { HeadOfStateNoId } from '../../src/data/types';
+
+export const source = `https://www.mapsofworld.com/list-of/presidents-peru/`;
 
 const countryId = 16;
 
-export const peru: Omit<HeadOfState, `id`>[] = [
+export const peru: HeadOfStateNoId[] = [
 	{
 		countryId,
 		name: `Pedro Castillo`,
 		tookOffice: new Date(`28 July 2021`),
-		leftOffice: new Date(`28 July 2021`),
+		leftOffice: new Date(),
 		party: `Perú Libre`,
 		leaning: 0,
 	},
@@ -38,7 +40,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 	{
 		countryId,
 		name: `Pedro Pablo Kuczynski Godard`,
-		tookOffice: new Date(`July 28, 2018`),
+		tookOffice: new Date(`July 28, 2016`),
 		leftOffice: new Date(`March 21, 2018`),
 		party: `Peruvians for Change`,
 		leaning: 0,
@@ -46,7 +48,7 @@ export const peru: Omit<HeadOfState, `id`>[] = [
 	{
 		countryId,
 		name: `Ollanta Humala`,
-		tookOffice: new Date(`July 28,  2011`),
+		tookOffice: new Date(`July 28, 2011`),
 		leftOffice: new Date(`July 28, 2016`),
 		party: `Peruvian Nationalist Party`,
 		leaning: 0,

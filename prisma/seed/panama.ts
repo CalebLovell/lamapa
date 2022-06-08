@@ -1,10 +1,10 @@
-import { HeadOfState } from '@prisma/client';
+import { HeadOfStateNoId } from '../../src/data/types';
 
 export const source = `https://www.mapsofworld.com/list-of/presidents-panama/`;
 
 const countryId = 9;
 
-export const panama: Omit<HeadOfState, `id`>[] = [
+export const panama: HeadOfStateNoId[] = [
 	{
 		countryId,
 		name: `Laurentino Cortizo`,

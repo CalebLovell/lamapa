@@ -1,10 +1,10 @@
-import { HeadOfState } from '@prisma/client';
+import { HeadOfStateNoId } from '../../src/data/types';
 
 export const source = `https://en.wikipedia.org/wiki/List_of_presidents_of_Bolivia`;
 
 const countryId = 17;
 
-export const bolivia: Omit<HeadOfState, `id`>[] = [
+export const bolivia: HeadOfStateNoId[] = [
 	{
 		countryId,
 		name: `José Manuel Pando`,

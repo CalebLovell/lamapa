@@ -1,10 +1,10 @@
-import { HeadOfState } from '@prisma/client';
+import { HeadOfStateNoId } from '../../src/data/types';
 
 export const source = `https://www.mapsofworld.com/list-of/presidents-of-ecuador/`;
 
 const countryId = 12;
 
-export const ecuador: Omit<HeadOfState, `id`>[] = [
+export const ecuador: HeadOfStateNoId[] = [
 	{
 		countryId,
 		name: `Guillermo Lasso`,
