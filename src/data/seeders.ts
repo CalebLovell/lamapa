@@ -16,14 +16,13 @@ import { honduras } from './honduras';
 import { nicaragua } from './nicaragua';
 import { costaRica } from './costa-rica';
 import { panama } from './panama';
-
-export const leanings = {
-	LEFT: 1,
-	CENTER_LEFT: 2,
-	CENTRIST: 3,
-	CENTER_RIGHT: 4,
-	RIGHT: 5,
-};
+import { ecuador } from './ecuador';
+import { guyana } from './guyana';
+import { suriname } from './suriname';
+import { trinidadAndTobago } from './trinidad-and-tobago';
+import { jamaica } from './jamaica';
+import { haiti } from './haiti';
+import { dominicanRepublic } from './dominican-republic';
 
 export const countries: Country[] = [
 	{ id: 1, name: `United States of America` },
@@ -56,7 +55,7 @@ export const countries: Country[] = [
 	{ id: 28, name: `Trinidad and Tobago` },
 ];
 
-export const raw = [
+const raw = [
 	...usa,
 	...mexico,
 	...brazil,
@@ -74,6 +73,13 @@ export const raw = [
 	...nicaragua,
 	...costaRica,
 	...panama,
+	...ecuador,
+	...guyana,
+	...suriname,
+	...trinidadAndTobago,
+	...jamaica,
+	...haiti,
+	...dominicanRepublic,
 ];
 
 export const headsOfState = raw.map(x => {
@@ -81,33 +87,10 @@ export const headsOfState = raw.map(x => {
 	return { ...x, tookOffice: new Date(tookOffice), leftOffice: new Date(leftOffice) };
 });
 
-// const tookOffice = new Date(`2021-10-10`);
-// const leftOffice = new Date(`2022-10-10`);
-
-// export const headsOfState: Omit<HeadOfState, `id`>[] = [
-// 	{ countryId: 24, name: `Miguel Díaz-Canel`, leaning: leanings.LEFT, tookOffice, leftOffice },
-// 	{ countryId: 5, name: `Andrew Holness`, leaning: 7, tookOffice, leftOffice },
-// 	{ countryId: 5, name: `Ariel Henry`, leaning: 5, tookOffice, leftOffice },
-// 	{ countryId: 5, name: `Luis Abinader`, leaning: 4, tookOffice, leftOffice },
-// 	{ countryId: 5, name: `Paula-Mae Weekes`, leaning: 5, tookOffice, leftOffice },
-// 	{ countryId: 5, name: `Nayib Bukele`, leaning: 10, tookOffice, leftOffice },
-// 	{ countryId: 5, name: `Xiomara Castro`, leaning: 3, tookOffice, leftOffice },
-// 	{ countryId: 5, name: `John Antonio Briceño`, leaning: 6, tookOffice, leftOffice },
-// 	{ countryId: 5, name: `Alejandro Giammattei`, leaning: 7, tookOffice, leftOffice },
-// 	{ countryId: 5, name: `Daniel Ortega`, leaning: 0, tookOffice, leftOffice },
-// 	{ countryId: 5, name: `Rodrigo Chaves`, leaning: 4, tookOffice, leftOffice },
-// 	{ countryId: 5, name: `Laurentino Cortizo`, leaning: 4, tookOffice, leftOffice },
-// 	{ countryId: 5, name: `Iván Duque`, leaning: 6, tookOffice, leftOffice },
-// 	{ countryId: 5, name: `Nicolás Maduro`, leaning: 0, tookOffice, leftOffice },
-// 	{ countryId: 5, name: `Irfaan Ali`, leaning: 2, tookOffice, leftOffice },
-// 	{ countryId: 5, name: `Chan Santokhi`, leaning: 4, tookOffice, leftOffice },
-// 	{ countryId: 5, name: `Guillermo Lasso`, leaning: 7, tookOffice, leftOffice },
-// 	{ countryId: 5, name: `Pedro Castillo`, leaning: 1, tookOffice, leftOffice },
-// 	{ countryId: 5, name: `Gabriel Borique`, leaning: 3, tookOffice, leftOffice },
-// 	{ countryId: 5, name: `Alberto Fernández`, leaning: 2, tookOffice, leftOffice },
-// 	{ countryId: 5, name: `Luis Lacalle Pou`, leaning: 6, tookOffice, leftOffice },
-// 	{ countryId: 5, name: `Mario Abdo Benítez`, leaning: 8, tookOffice, leftOffice },
-// 	{ countryId: 5, name: `Bolsonaro`, leaning: 10, tookOffice, leftOffice },
-// 	{ countryId: 5, name: `Luis Arce`, leaning: 2, tookOffice, leftOffice },
-// 	{ countryId: 5, name: `Gabriel Serville`, leaning: 0, tookOffice, leftOffice },
-// ];
+export const leanings = {
+	LEFT: 1,
+	CENTER_LEFT: 2,
+	CENTRIST: 3,
+	CENTER_RIGHT: 4,
+	RIGHT: 5,
+};
