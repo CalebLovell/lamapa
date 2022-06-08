@@ -9,6 +9,13 @@ import { chile } from './chile';
 import { cuba } from './cuba';
 import { paraguay } from './paraguay';
 import { uruguay } from './uruguay';
+import { guatemala } from './guatemala';
+import { belize } from './belize';
+import { elsalvador } from './el-salvador';
+import { honduras } from './honduras';
+import { nicaragua } from './nicaragua';
+import { costaRica } from './costa-rica';
+import { panama } from './panama';
 
 export const leanings = {
 	LEFT: 1,
@@ -49,7 +56,25 @@ export const countries: Country[] = [
 	{ id: 28, name: `Trinidad and Tobago` },
 ];
 
-export const raw = [...usa, ...mexico, ...brazil, ...bolivia, ...argentina, ...cuba, ...peru, ...chile, ...paraguay, ...uruguay];
+export const raw = [
+	...usa,
+	...mexico,
+	...brazil,
+	...bolivia,
+	...argentina,
+	...cuba,
+	...peru,
+	...chile,
+	...paraguay,
+	...uruguay,
+	...guatemala,
+	...belize,
+	...elsalvador,
+	...honduras,
+	...nicaragua,
+	...costaRica,
+	...panama,
+];
 
 export const headsOfState = raw.map(x => {
 	const { tookOffice, leftOffice } = x;
