@@ -3,8 +3,8 @@ import * as d3 from 'd3';
 import * as topojson from 'topojson-client';
 import { worldTopojson as worldGeojson } from '@data/worldGeojson';
 import { Country } from '@components/Country';
-import { useDataState } from '@components/DataProvider';
 import { HeadOfStateReturn } from '@data/types';
+import { useStore } from '@data/store';
 
 const laTopoJson = topojson.feature(worldGeojson, worldGeojson.objects.countries);
 const height = 800;
@@ -20,7 +20,7 @@ type Props = {
 
 export default function Map({ headsOfState }: Props) {
 	const mapRef = React.useRef(null);
-	const { mapColorType } = useDataState();
+	const mapColorType = useStore(state => state.mapColorType);
 
 	const domain = mapColorType === `global` ? [0, 10] : [10, 0];
 	const interpolateColor = d3.scaleSequential(d3.interpolateRdBu).domain(domain);

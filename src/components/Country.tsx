@@ -1,11 +1,11 @@
 import * as React from 'react';
 import * as d3 from 'd3';
 import { motion } from 'framer-motion';
-import { useDataDispatch } from './DataProvider';
+import { useStore } from '@data/store';
 
 export const Country = ({ path, name, color }: { path: string | null; name: string; color: string }) => {
-	const dispatch = useDataDispatch();
-	const onClick = () => dispatch({ type: `SET_SELECTED_COUNTRY`, payload: name });
+	const setSelectedCountryName = useStore(state => state.setSelectedCountryName);
+	const onClick = () => setSelectedCountryName(name);
 	return (
 		<motion.path
 			// whileHover={{ fill: `purple` }}

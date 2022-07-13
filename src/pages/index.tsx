@@ -2,8 +2,8 @@ import { PageWrapper } from '@components/PageWrapper';
 import { InfoPanel } from '@components/InfoPanel';
 import { TimelineSlider } from '@components/TimelineSlider';
 import dynamic from 'next/dynamic';
-import { useDataState } from '@components/DataProvider';
 import { useHeadsOfState } from '@hooks/useHeadsOfState';
+import { useStore } from '@data/store';
 
 const DynamicMap = dynamic(() => import(`@components/Map`), {
 	ssr: false,
@@ -13,7 +13,7 @@ const Index = () => {
 	const date = new Date(`2018-01-01`);
 	const { data: headsOfState } = useHeadsOfState(date);
 
-	const { selectedCountryName } = useDataState();
+	const selectedCountryName = useStore(state => state.selectedCountryName);
 	const selectedHeadOfState = headsOfState?.find(x => x.country.name === selectedCountryName);
 
 	return (

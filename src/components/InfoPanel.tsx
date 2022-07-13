@@ -1,18 +1,18 @@
-import { useDataState } from './DataProvider';
 import { format } from 'date-fns';
 import { HeadOfStateReturn } from '@data/types';
+import { useStore } from '@data/store';
 
 type Props = {
 	headOfState: HeadOfStateReturn | undefined;
 };
 
 export const InfoPanel = ({ headOfState }: Props) => {
-	const { year } = useDataState();
+	const datetime = useStore(state => state.datetime);
 	const formatDate = date => (date ? format(new Date(date), `MMM do, yyy`) : undefined);
 
 	return (
 		<div className='flex flex-col items-center justify-center w-full p-4 bg-gray-800 rounded-md'>
-			<p className='mb-1 text-base font-medium text-gray-100'>{`${headOfState?.country.name} on ${formatDate(year)}`}</p>
+			<p className='mb-1 text-base font-medium text-gray-100'>{`${headOfState?.country.name} on ${formatDate(datetime)}`}</p>
 			<p className='mb-1 text-base font-medium text-gray-100'>{`Head of State: ${headOfState?.name}`}</p>
 			<p className='mb-1 text-base font-medium text-gray-100'>{`Political Party: ${headOfState?.party}`}</p>
 			<p className='mb-1 text-base font-medium text-gray-100'>{`Political Leaning: ${headOfState?.leaning}`}</p>
