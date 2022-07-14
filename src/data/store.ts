@@ -10,9 +10,9 @@ type MapState = {
 };
 
 export const useStore = create<MapState>(set => ({
-	datetime: `2022-01-01`,
+	datetime: new Date().toISOString(),
 	setDatetime: by => set(() => ({ datetime: by })),
-	mapColorType: `global`,
+	mapColorType: `usa`,
 	setMapColorType: by => set(() => ({ mapColorType: by })),
 	selectedCountryName: null,
 	setSelectedCountryName: by => set(() => ({ selectedCountryName: by })),

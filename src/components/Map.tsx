@@ -22,14 +22,14 @@ export default function Map({ headsOfState }: Props) {
 	const mapRef = React.useRef(null);
 	const mapColorType = useStore(state => state.mapColorType);
 
-	const domain = mapColorType === `global` ? [0, 10] : [10, 0];
+	const domain = mapColorType === `global` ? [0, 6] : [6, 0];
 	const interpolateColor = d3.scaleSequential(d3.interpolateRdBu).domain(domain);
 
 	const countries = laTopoJson.features.map(data => {
 		const countryName = data.properties.ADMIN;
 		const path = projectionPath(data);
 		const headOfState = headsOfState?.find(x => x.country.name === countryName);
-		const color = headOfState ? interpolateColor(headOfState.politicalLeaning) : `black`;
+		const color = headOfState ? interpolateColor(headOfState.leaning) : `black`;
 		return <Country key={countryName} path={path} name={countryName} color={color} />;
 	});
 
