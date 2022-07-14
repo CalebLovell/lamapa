@@ -5,9 +5,13 @@ export type HeadOfStateReturn = HeadOfState & { country: Country };
 export type HeadOfStateNoId = Omit<HeadOfState, `id`>;
 
 export const leanings = {
-	LEFT: 1,
-	CENTER_LEFT: 2,
-	CENTRIST: 3,
-	CENTER_RIGHT: 4,
-	RIGHT: 5,
+	FAR_LEFT: 1,
+	LEFT: 2,
+	CENTER_LEFT: 3,
+	CENTRIST: 4,
+	CENTER_RIGHT: 5,
+	RIGHT: 6,
+	FAR_RIGHT: 7,
+
+	MONARCHY: 9,
 };
