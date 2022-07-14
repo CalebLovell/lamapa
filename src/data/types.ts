@@ -2,7 +2,14 @@ import { Country, HeadOfState } from '@prisma/client';
 
 export type CountryReturn = Country;
 export type HeadOfStateReturn = HeadOfState & { country: Country };
-export type HeadOfStateNoId = Omit<HeadOfState, `id`>;
+export type HeadOfStateNoId = {
+	countryId: HeadOfState[`countryId`];
+	name: HeadOfState[`name`];
+	party: HeadOfState[`party`];
+	leaning: HeadOfState[`leaning`];
+	tookOffice: string;
+	leftOffice: string;
+};
 
 export const leanings = {
 	FAR_LEFT: 1,

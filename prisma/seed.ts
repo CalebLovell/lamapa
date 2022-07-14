@@ -60,7 +60,7 @@ const countries: Country[] = [
 	{ id: 28, name: `Trinidad and Tobago` },
 ];
 
-const rawHeadsOfStateData = [
+const headsOfState = [
 	...usa,
 	...mexico,
 	...guatemala,
@@ -98,14 +98,11 @@ async function main() {
 	const seededCountries = await Promise.all(createManyCountryPromises);
 	console.log({ seededCountries });
 
-	const headsOfState = rawHeadsOfStateData.map(x => {
-		const { tookOffice, leftOffice } = x;
-		return { ...x, tookOffice: new Date(tookOffice), leftOffice: new Date(leftOffice) };
-	});
-
 	const createManyHeadsOfStatePromises = headsOfState.map(x => {
 		const { countryId, name, party, leaning, tookOffice, leftOffice } = x;
-		return prisma.headOfState.create({ data: { countryId, name, party, leaning, tookOffice, leftOffice } });
+		return prisma.headOfState.create({
+			data: { countryId, name, party, leaning, tookOffice: new Date(tookOffice), leftOffice: leftOffice ? new Date(leftOffice) : new Date() },
+		});
 	});
 	const seededHeadsOfState = await Promise.all(createManyHeadsOfStatePromises);
 	console.log({ seededHeadsOfState });
