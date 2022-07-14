@@ -3,8 +3,8 @@ import * as d3 from 'd3';
 import * as topojson from 'topojson-client';
 import { worldTopojson as worldGeojson } from '@data/worldGeojson';
 import { Country } from '@components/Country';
-import { HeadOfStateReturn } from '@data/types';
 import { useStore } from '@data/store';
+import { useHeadsOfState } from '@hooks/useHeadsOfState';
 
 const laTopoJson = topojson.feature(worldGeojson, worldGeojson.objects.countries);
 const height = 800;
@@ -14,11 +14,8 @@ const projectionPath = d3.geoPath().projection(projection);
 
 d3.select(`body`).append(`div`).attr(`id`, `tooltip`).attr(`style`, `position: absolute; opacity: 0`);
 
-type Props = {
-	headsOfState: HeadOfStateReturn[] | undefined;
-};
-
-export default function Map({ headsOfState }: Props) {
+export default function Map() {
+	const { data: headsOfState } = useHeadsOfState();
 	const mapRef = React.useRef(null);
 	const mapColorType = useStore(state => state.mapColorType);
 

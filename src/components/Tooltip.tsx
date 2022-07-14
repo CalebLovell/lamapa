@@ -1,6 +1,5 @@
 import * as React from 'react';
 import 'rc-tooltip/assets/bootstrap.css';
-import Slider from 'rc-slider';
 import type { SliderProps } from 'rc-slider';
 import raf from 'rc-util/lib/raf';
 import Tooltip from 'rc-tooltip';
@@ -57,17 +56,3 @@ export const handleRender: SliderProps[`handleRender`] = (node, props) => {
 		</HandleTooltip>
 	);
 };
-
-const TooltipSlider = ({ tipFormatter, tipProps, ...props }: SliderProps & { tipFormatter?: (value: number) => React.ReactNode; tipProps: any }) => {
-	const tipHandleRender: SliderProps[`handleRender`] = (node, handleProps) => {
-		return (
-			<HandleTooltip value={handleProps.value} visible={handleProps.dragging} tipFormatter={tipFormatter} {...tipProps}>
-				{node}
-			</HandleTooltip>
-		);
-	};
-
-	return <Slider {...props} handleRender={tipHandleRender} />;
-};
-
-export default TooltipSlider;

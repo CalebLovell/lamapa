@@ -1,8 +1,8 @@
 import create from 'zustand';
 
 type MapState = {
-	datetime: string;
-	setDatetime: (by: string) => void;
+	year: number;
+	setYear: (by: number) => void;
 	mapColorType: `global` | `usa`;
 	setMapColorType: (by: `global` | `usa`) => void;
 	selectedCountryName: string | null;
@@ -10,8 +10,8 @@ type MapState = {
 };
 
 export const useStore = create<MapState>(set => ({
-	datetime: new Date().toISOString(),
-	setDatetime: by => set(() => ({ datetime: by })),
+	year: new Date().getFullYear(),
+	setYear: by => set(() => ({ year: by })),
 	mapColorType: `usa`,
 	setMapColorType: by => set(() => ({ mapColorType: by })),
 	selectedCountryName: null,
