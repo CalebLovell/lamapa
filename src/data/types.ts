@@ -22,3 +22,15 @@ export const leanings = {
 
 	MONARCHY: 9,
 };
+
+export const leaningLabels = {
+	0: `Uknown`,
+	1: `Far Left`,
+	2: `Left Wing`,
+	3: `Center Left`,
+	4: `Center`,
+	5: `Center Right`,
+	6: `Right Wing`,
+	7: `Far Right`,
+	9: `Monarchy`,
+};
