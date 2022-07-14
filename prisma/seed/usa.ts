@@ -376,5 +376,6 @@ export const usa: HeadOfStateNoId[] = [
 ];
 
 export const puertoRico = usa.map(x => {
+	// TODO only after October 18, 1898
 	return { ...x, countryId: 23 };
 });
