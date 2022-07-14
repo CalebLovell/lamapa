@@ -24,7 +24,7 @@ export const Country = ({ path, name, color }: { path: string | null; name: stri
 
 // Show tooltip when hovering over a region
 const handleMouseOver = name => {
-	d3.select(`#tooltip`).style(`opacity`, 1).style(`background-color`, `white`).text(name);
+	d3.select(`#tooltip`).style(`opacity`, 1).style(`background-color`, `black`).text(name);
 };
 
 // Hide tooltip as mouse leaves region
