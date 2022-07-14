@@ -91,15 +91,13 @@ const headsOfState = [
 ];
 
 async function main() {
-	const createManyCountryPromises = countries.map(x => {
-		const { id, name } = x;
+	const createManyCountryPromises = countries.map(({ id, name }) => {
 		return prisma.country.create({ data: { id, name } });
 	});
 	const seededCountries = await Promise.all(createManyCountryPromises);
 	console.log({ seededCountries });
 
-	const createManyHeadsOfStatePromises = headsOfState.map(x => {
-		const { countryId, name, party, leaning, tookOffice, leftOffice } = x;
+	const createManyHeadsOfStatePromises = headsOfState.map(({ countryId, name, party, leaning, tookOffice, leftOffice }) => {
 		return prisma.headOfState.create({
 			data: { countryId, name, party, leaning, tookOffice: new Date(tookOffice), leftOffice: leftOffice ? new Date(leftOffice) : new Date() },
 		});
