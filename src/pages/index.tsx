@@ -10,8 +10,7 @@ const DynamicMap = dynamic(() => import(`@components/Map`), {
 });
 
 const Index = () => {
-	const date = new Date(`2018-01-01`);
-	const { data: headsOfState } = useHeadsOfState(date);
+	const { data: headsOfState } = useHeadsOfState();
 
 	const selectedCountryName = useStore(state => state.selectedCountryName);
 	const selectedHeadOfState = headsOfState?.find(x => x.country.name === selectedCountryName);
@@ -20,16 +19,17 @@ const Index = () => {
 		<PageWrapper>
 			<main className='flex flex-col items-center justify-center h-full'>
 				<h1 className='py-4 text-3xl font-medium text-gray-100'>Latin America Political History</h1>
+				<div className='w-full mb-4'>
+					<TimelineSlider />
+				</div>
 				<div className='flex justify-center'>
 					<div id='map-container' className='w-full h-full'>
-						<DynamicMap headsOfState={headsOfState} />
+						<DynamicMap />
 					</div>
 					<div className='w-full h-full'>
-						<div className='w-full mb-4'>
-							<TimelineSlider />
-						</div>
+						<div className='w-full mb-4'></div>
 						<div className='w-full'>
-							<InfoPanel headOfState={selectedHeadOfState} />
+							{/* <InfoPanel headOfState={selectedHeadOfState} /> */}
 						</div>
 					</div>
 				</div>
