@@ -11,7 +11,7 @@ export const InfoPanel = ({ headOfState }: Props) => {
 	const formatDate = date => (date ? format(new Date(date), `MMM do, yyy`) : undefined);
 
 	return (
-		<div className='flex flex-col items-center justify-center w-full p-4 bg-gray-800 rounded-md'>
+		<div className='flex w-full flex-col items-center justify-center rounded-md bg-gray-800 p-4'>
 			<p className='mb-1 text-base font-medium text-gray-100'>{`${headOfState?.country.name} on ${formatDate(datetime)}`}</p>
 			<p className='mb-1 text-base font-medium text-gray-100'>{`Head of State: ${headOfState?.name}`}</p>
 			<p className='mb-1 text-base font-medium text-gray-100'>{`Political Party: ${headOfState?.party}`}</p>
