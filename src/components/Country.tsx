@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { motion } from 'framer-motion';
 import { useStore } from '@data/store';
 import * as d3 from 'd3';
 
@@ -15,8 +14,6 @@ export const Country = ({ path, name, color }: Props) => {
 
 	return (
 		<path
-			// whileHover={{ fill: `purple`, scale: 1.1 }}
-			// onHoverEnd={() => setTooltip(name)}
 			id={name}
 			onClick={onClick}
 			d={path ? path : undefined}
@@ -40,6 +37,7 @@ const handleMouseOver = name => {
 		.style(`color`, `black`)
 		.style(`border-radius`, `0.25rem`)
 		.style(`padding`, `0.25rem`)
+		.style(`font-weight`, `600`)
 		.text(name);
 };
 
