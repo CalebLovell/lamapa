@@ -12,7 +12,7 @@ export const InfoPanel = ({ headOfState }: Props) => {
 	const formatDate = (date: Date | undefined) => (date ? format(new Date(date), `MMM do, yyy`) : undefined);
 
 	return (
-		<div className='flex flex-col items-center justify-center p-4 text-center bg-gray-800 rounded-md w-96'>
+		<div className='flex w-96 flex-col items-center justify-center rounded-md bg-gray-800 p-4 text-center'>
 			<p className='mb-1 text-base font-medium text-gray-100'>{`${headOfState?.country.name} in ${year}`}</p>
 			<p className='mb-1 text-base font-medium text-gray-100'>{`Head of State: ${headOfState?.name}`}</p>
 			<p className='mb-1 text-base font-medium text-gray-100'>{`Political Party: ${headOfState?.party}`}</p>

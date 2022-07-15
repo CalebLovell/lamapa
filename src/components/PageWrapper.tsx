@@ -49,11 +49,11 @@ export const PageWrapper: React.FC<Props> = ({ metadata, children }) => {
 					<meta name='twitter:image:alt' content={description} />
 				</Head>
 			</PlausibleProvider>
-			<div className='bg-gray-700'>
+			<div className='h-full bg-gray-700'>
 				<div className='h-1 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500' />
-				<div className='max-w-6xl mx-auto'>
+				<div className='h-full max-w-6xl mx-auto'>
 					<Header />
-					<main className='flex flex-col min-h-content'>{children}</main>
+					<main className='flex flex-col items-center min-h-content'>{children}</main>
 					<Footer />
 				</div>
 			</div>

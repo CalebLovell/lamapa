@@ -17,23 +17,15 @@ const Index = () => {
 
 	return (
 		<PageWrapper>
-			<main className='flex flex-col items-center justify-center h-full'>
-				<h1 className='py-4 text-3xl font-medium text-gray-100'>Latin America Political History</h1>
-				<div className='w-full mb-4'>
-					<TimelineSlider />
-				</div>
-				<div className='flex justify-center'>
-					<div id='map-container' className='w-full h-full'>
-						<DynamicMap />
-					</div>
-					<div className='w-full h-full'>
-						<div className='w-full mb-4'></div>
-						<div className='w-full'>
-							<InfoPanel headOfState={selectedHeadOfState} />
-						</div>
-					</div>
-				</div>
-			</main>
+			{/* <div className='flex items-center h-full' style={{ minHeight: `inherit` }}> */}
+			<div className='flex flex-col w-full max-w-3xl p-2 h-96' style={{ minHeight: `inherit` }}>
+				<DynamicMap />
+				<TimelineSlider />
+			</div>
+			{/* <div>
+					<InfoPanel headOfState={selectedHeadOfState} />
+				</div> */}
+			{/* </div> */}
 		</PageWrapper>
 	);
 };

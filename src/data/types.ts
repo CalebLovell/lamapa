@@ -36,7 +36,7 @@ export const leaningLabels = {
 };
 
 export const getLeaningColors = (mapColorType: `global` | `usa`) => {
-	const global = {
+	const globalColors = {
 		0: `#000000`,
 		1: `rgb(157,0,0)`,
 		2: `rgb(215,17,27)`,
@@ -47,7 +47,7 @@ export const getLeaningColors = (mapColorType: `global` | `usa`) => {
 		7: `rgb(0,96,147)`,
 		9: `rgb(67,0,65)`,
 	};
-	const usa = {
+	const usaColors = {
 		0: `#000000`,
 		7: `rgb(157,0,0)`,
 		6: `rgb(215,17,27)`,
@@ -58,5 +58,5 @@ export const getLeaningColors = (mapColorType: `global` | `usa`) => {
 		1: `rgb(0,96,147)`,
 		9: `rgb(67,0,65)`,
 	};
-	return mapColorType === `global` ? global : usa;
+	return mapColorType === `global` ? globalColors : usaColors;
 };

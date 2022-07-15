@@ -9,8 +9,7 @@ export const TimelineSlider = () => {
 	const debouncedSetYear = useDebouncedCallback(value => setYear(value), 200);
 
 	return (
-		<div className='flex flex-col items-center justify-center p-8 bg-gray-800 rounded-md'>
-			{/* <p className='mb-1 text-base font-medium text-gray-100'>Select a Year</p> */}
+		<div className='flex w-full p-6 bg-gray-800 rounded-md'>
 			<Slider
 				className='mb-2'
 				min={1789}
@@ -35,16 +34,16 @@ export const TimelineSlider = () => {
 };
 
 const createMarks = () => {
-	const years = [1789, 2022];
-	for (let i = 1800; i <= 2022; i += 30) {
-		years.push(i);
-	}
+	const years = [1789, 1830, 1860, 1890, 1920, 1950, 1980, 2022];
+	// for (let i = 1820; i <= 2022; i += 30) {
+	// 	years.push(i);
+	// }
 	const asdf = years.map(year => [
 		year,
 		{
 			label: <p className=''>{year}</p>,
 			style: {
-				color: `red`,
+				color: `white`,
 			},
 		},
 	]);
