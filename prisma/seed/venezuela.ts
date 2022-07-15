@@ -7,19 +7,11 @@ const countryId = 11;
 export const venezuela: HeadOfStateNoId[] = [
 	{
 		countryId,
-		name: `Juan Guaidó`,
-		party: `Popular Will Party / Independent`,
-		leaning: leanings.CENTRIST,
-		tookOffice: `23 January 2019`,
-		leftOffice: ``,
-	},
-	{
-		countryId,
 		name: `Nicolás Maduro`,
 		party: `United Socialist Party`,
 		leaning: leanings.FAR_LEFT,
 		tookOffice: `5 March 2013`,
-		leftOffice: `10 January 2019`,
+		leftOffice: ``,
 	},
 	{
 		countryId,

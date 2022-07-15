@@ -337,7 +337,7 @@ export const brazil: HeadOfStateNoId[] = [
 		countryId,
 		name: `Jair Bolsonaro`,
 		party: `Social Liberal Party Brazil, Independent, Liberal Party`,
-		leaning: leanings.CENTRIST,
+		leaning: leanings.FAR_RIGHT,
 		tookOffice: `1 January 2019`,
 		leftOffice: ``,
 	},
