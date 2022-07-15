@@ -9,7 +9,7 @@ export const TimelineSlider = () => {
 	const debouncedSetYear = useDebouncedCallback(value => setYear(value), 200);
 
 	return (
-		<div className='flex w-full p-6 bg-gray-800 rounded-md'>
+		<div className='flex w-full px-5 py-6 rounded-md'>
 			<Slider
 				className='mb-2'
 				min={1789}
@@ -20,14 +20,15 @@ export const TimelineSlider = () => {
 				defaultValue={20}
 				handleRender={handleRender}
 				onChange={(newYear: number) => debouncedSetYear(newYear)}
-				trackStyle={{}}
-				handleStyle={
-					{
-						// borderColor: `blue`,
-						// backgroundColor: `black`,
-					}
-				}
-				railStyle={{}}
+				trackStyle={{
+					backgroundColor: `black`,
+				}}
+				handleStyle={{
+					backgroundColor: `black`,
+				}}
+				railStyle={{
+					backgroundColor: `black`,
+				}}
 			/>
 		</div>
 	);
@@ -41,9 +42,9 @@ const createMarks = () => {
 	const asdf = years.map(year => [
 		year,
 		{
-			label: <p className=''>{year}</p>,
+			label: <p className='text-sm font-semibold text-black'>{year}</p>,
 			style: {
-				color: `white`,
+				color: `black`,
 			},
 		},
 	]);

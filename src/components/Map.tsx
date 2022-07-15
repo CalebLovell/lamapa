@@ -27,7 +27,7 @@ export default function Map() {
 	});
 
 	return (
-		<svg id='map' ref={mapRef} width='auto' height='auto' viewBox='-4 10 360 480' className=''>
+		<svg ref={mapRef} width='auto' height='auto' viewBox='-4 10 360 480'>
 			<g>{countries}</g>
 		</svg>
 	);

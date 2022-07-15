@@ -19,12 +19,10 @@ export const leanings = {
 	CENTER_RIGHT: 5,
 	RIGHT: 6,
 	FAR_RIGHT: 7,
-
-	MONARCHY: 9,
+	MONARCHY: 8,
 };
 
 export const leaningLabels = {
-	0: `Unknown`,
 	1: `Far Left`,
 	2: `Left Wing`,
 	3: `Center Left`,
@@ -32,7 +30,8 @@ export const leaningLabels = {
 	5: `Center Right`,
 	6: `Right Wing`,
 	7: `Far Right`,
-	9: `Monarchy`,
+	8: `Monarchy`,
+	0: `Unknown`,
 };
 
 export const getLeaningColors = (mapColorType: `global` | `usa`) => {
@@ -45,7 +44,7 @@ export const getLeaningColors = (mapColorType: `global` | `usa`) => {
 		5: `rgb(147,184,200)`,
 		6: `rgb(28,133,196)`,
 		7: `rgb(0,96,147)`,
-		9: `rgb(67,0,65)`,
+		8: `rgb(67,0,65)`,
 	};
 	const usaColors = {
 		0: `#000000`,
@@ -56,7 +55,7 @@ export const getLeaningColors = (mapColorType: `global` | `usa`) => {
 		3: `rgb(147,184,200)`,
 		2: `rgb(28,133,196)`,
 		1: `rgb(0,96,147)`,
-		9: `rgb(67,0,65)`,
+		8: `rgb(67,0,65)`,
 	};
 	return mapColorType === `global` ? globalColors : usaColors;
 };

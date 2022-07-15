@@ -10,10 +10,6 @@
 	src: url(/fonts/inter-var.ttf) format('truetype');
 }
 
-:root {
-	--h-content-area: calc(100vh - theme('height.1') - theme('height.14'));
-}
-
 /* custom scrollbar */
 
 ::-webkit-scrollbar {

@@ -7,6 +7,8 @@ type MapState = {
 	setMapColorType: (by: `global` | `usa`) => void;
 	selectedCountryName: string | null;
 	setSelectedCountryName: (by: string | null) => void;
+	keyVisible: boolean;
+	setKeyVisible: (by: boolean) => void;
 };
 
 export const useStore = create<MapState>(set => ({
@@ -16,4 +18,6 @@ export const useStore = create<MapState>(set => ({
 	setMapColorType: by => set(() => ({ mapColorType: by })),
 	selectedCountryName: null,
 	setSelectedCountryName: by => set(() => ({ selectedCountryName: by })),
+	keyVisible: true,
+	setKeyVisible: by => set(() => ({ keyVisible: by })),
 }));

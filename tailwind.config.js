@@ -11,9 +11,6 @@ module.exports = {
 			fontFamily: {
 				sans: [`Inter`, ...fontFamily.sans],
 			},
-			minHeight: {
-				content: `var(--h-content-area)`,
-			},
 			colors: {
 				orange,
 			},
