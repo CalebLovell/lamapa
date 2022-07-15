@@ -9,6 +9,8 @@ type MapState = {
 	setSelectedCountryName: (by: string | null) => void;
 	keyVisible: boolean;
 	setKeyVisible: (by: boolean) => void;
+	modalIsOpen: boolean;
+	setModalIsOpen: (by: boolean) => void;
 };
 
 export const useStore = create<MapState>(set => ({
@@ -20,4 +22,6 @@ export const useStore = create<MapState>(set => ({
 	setSelectedCountryName: by => set(() => ({ selectedCountryName: by })),
 	keyVisible: true,
 	setKeyVisible: by => set(() => ({ keyVisible: by })),
+	modalIsOpen: false,
+	setModalIsOpen: by => set(() => ({ modalIsOpen: by })),
 }));
