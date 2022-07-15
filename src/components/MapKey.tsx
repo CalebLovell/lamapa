@@ -9,10 +9,10 @@ export const MapKey = () => {
 
 	if (!visible) return null;
 	return (
-		<div className='absolute bottom-0 flex flex-col p-2 rounded-sm left-2 h-2/3 w-36'>
+		<div className='absolute bottom-0 left-2 flex h-2/3 w-36 flex-col rounded-sm p-2'>
 			{labels.map((label, index) => (
-				<div key={label} className='flex items-center h-full mt-1'>
-					<div className='mr-2 w-1.5 h-full' style={{ backgroundColor: test[index] }} />
+				<div key={label} className='mt-1 flex h-full items-center'>
+					<div className='mr-2 h-full w-1.5' style={{ backgroundColor: test[index] }} />
 					<p className='text-sm font-semibold text-black'>{label}</p>
 				</div>
 			))}

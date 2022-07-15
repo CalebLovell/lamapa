@@ -19,14 +19,14 @@ const Index = () => {
 
 	return (
 		<PageWrapper>
-			<div className='flex flex-col items-center h-screen bg-gray-300'>
-				<div className='flex flex-col h-full max-w-3xl'>
-					<main className='flex flex-col h-full'>
+			<div className='flex h-screen flex-col items-center bg-gray-300'>
+				<div className='flex h-full max-w-3xl flex-col'>
+					<main className='flex h-full flex-col'>
 						<div className='relative px-2'>
 							<MapHeader headOfState={selectedHeadOfState} />
 							<Toolbar />
 						</div>
-						<div className='relative flex items-center justify-center h-full'>
+						<div className='relative flex h-full items-center justify-center'>
 							<MapKey />
 							<div className='h-full'>
 								<DynamicMap />

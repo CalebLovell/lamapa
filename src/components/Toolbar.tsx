@@ -9,33 +9,33 @@ export const Toolbar = () => {
 	const setKeyVisible = useStore(state => state.setKeyVisible);
 
 	return (
-		<div className='absolute right-0 z-10 flex flex-col items-center justify-center top-36 h-14'>
+		<div className='absolute right-0 top-36 z-10 flex h-14 flex-col items-center justify-center'>
 			<button
 				name='open-map-info'
 				aria-label='Open map info modal'
 				type='button'
-				className='p-2 text-black rounded-md hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-0'
+				className='rounded-md p-2 text-black hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-0'
 				onClick={() => null}
 			>
-				<InformationCircleIcon className='w-6 h-6' />
+				<InformationCircleIcon className='h-6 w-6' />
 			</button>
 			<button
 				name='toggle-map-colors'
 				aria-label='Toggle map color scheme'
 				type='button'
-				className='p-2 mr-1 text-black rounded-md hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-0'
+				className='mr-1 rounded-md p-2 text-black hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-0'
 				onClick={() => setMapColorType(mapColorType === `global` ? `usa` : `global`)}
 			>
-				<ColorSwatchIcon className='w-6 h-6' />
+				<ColorSwatchIcon className='h-6 w-6' />
 			</button>
 			<button
 				name='toggle-map-colors'
 				aria-label='Toggle map color scheme'
 				type='button'
-				className='p-2 mr-1 text-black rounded-md hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-0'
+				className='mr-1 rounded-md p-2 text-black hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-0'
 				onClick={() => setKeyVisible(!keyVisible)}
 			>
-				<KeyIcon className='w-6 h-6' />
+				<KeyIcon className='h-6 w-6' />
 			</button>
 		</div>
 	);
