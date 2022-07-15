@@ -5,7 +5,6 @@ import { useStore } from '@data/store';
 
 const getHeadsOfState = async (year: number) => {
 	const dateObj = new Date(year.toString());
-	console.log(dateObj);
 	const { data } = await axios.get<HeadOfStateReturn[]>(`/api/headOfState`, {
 		params: {
 			date: dateObj,

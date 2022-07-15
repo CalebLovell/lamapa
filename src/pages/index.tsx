@@ -29,7 +29,7 @@ const Index = () => {
 					<div className='w-full h-full'>
 						<div className='w-full mb-4'></div>
 						<div className='w-full'>
-							{/* <InfoPanel headOfState={selectedHeadOfState} /> */}
+							<InfoPanel headOfState={selectedHeadOfState} />
 						</div>
 					</div>
 				</div>
