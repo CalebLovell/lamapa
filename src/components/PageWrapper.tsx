@@ -1,6 +1,8 @@
 import Head from 'next/head';
 import PlausibleProvider from 'next-plausible';
 import { useRouter } from 'next/router';
+import { Header } from './Header';
+import { Footer } from './Footer';
 
 interface Props {
 	metadata?: {
@@ -49,8 +51,10 @@ export const PageWrapper: React.FC<Props> = ({ metadata, children }) => {
 			</PlausibleProvider>
 			<div className='bg-gray-700'>
 				<div className='h-1 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500' />
-				<div className='mx-auto max-w-6xl'>
-					<main className='flex min-h-content flex-col'>{children}</main>
+				<div className='max-w-6xl mx-auto'>
+					<Header />
+					<main className='flex flex-col min-h-content'>{children}</main>
+					<Footer />
 				</div>
 			</div>
 		</>
