@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import PlausibleProvider from 'next-plausible';
 import { useRouter } from 'next/router';
-import { Header } from './Header';
 
 interface Props {
 	metadata?: {

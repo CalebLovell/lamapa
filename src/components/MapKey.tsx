@@ -9,7 +9,7 @@ export const MapKey = () => {
 
 	if (!visible) return null;
 	return (
-		<div className='absolute bottom-0 flex flex-col p-2 rounded-md left-2 h-2/3 w-36'>
+		<div className='absolute bottom-0 flex flex-col p-2 rounded-sm left-2 h-2/3 w-36'>
 			{labels.map((label, index) => (
 				<div key={label} className='flex items-center h-full mt-1'>
 					<div className='mr-2 w-1.5 h-full' style={{ backgroundColor: test[index] }} />

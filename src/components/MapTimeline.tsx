@@ -4,12 +4,12 @@ import 'rc-slider/assets/index.css';
 import { handleRender } from './Tooltip';
 import { useDebouncedCallback } from 'use-debounce';
 
-export const TimelineSlider = () => {
+export const MapTimeline = () => {
 	const setYear = useStore(state => state.setYear);
 	const debouncedSetYear = useDebouncedCallback(value => setYear(value), 200);
 
 	return (
-		<div className='flex w-full px-5 py-6 rounded-md'>
+		<div className='flex w-full px-5 py-6'>
 			<Slider
 				className='mb-2'
 				min={1789}
@@ -36,9 +36,6 @@ export const TimelineSlider = () => {
 
 const createMarks = () => {
 	const years = [1789, 1830, 1860, 1890, 1920, 1950, 1980, 2022];
-	// for (let i = 1820; i <= 2022; i += 30) {
-	// 	years.push(i);
-	// }
 	const asdf = years.map(year => [
 		year,
 		{

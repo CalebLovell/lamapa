@@ -1,48 +1,56 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
 import { useStore } from '@data/store';
-import ReactTooltip from 'react-tooltip';
+import * as d3 from 'd3';
 
-export const Country = ({ path, name, color }: { path: string | null; name: string; color: string }) => {
+type Props = {
+	path: string | null;
+	name: string;
+	color: string;
+};
+
+export const Country = ({ path, name, color }: Props) => {
 	const setSelectedCountryName = useStore(state => state.setSelectedCountryName);
 	const onClick = () => setSelectedCountryName(name);
 
 	return (
-		<motion.path
+		<path
 			// whileHover={{ fill: `purple`, scale: 1.1 }}
+			// onHoverEnd={() => setTooltip(name)}
+			id={name}
 			onClick={onClick}
-			className='path'
 			d={path ? path : undefined}
 			fill={color}
-			strokeWidth='1.5'
-			stroke='white'
-		></motion.path>
+			strokeWidth='1'
+			stroke='#eaeaea'
+			onMouseOver={() => handleMouseOver(name)}
+			onMouseOut={handleMouseOut}
+			onMouseMove={event => handleMouseMove(event)}
+		/>
 	);
 };
 
-// const zoomSettings = {
-// 	duration: 1000,
-// 	ease: d3.easeCubicOut,
-// 	zoomLevel: 5,
-// };
+d3.select(`body`).append(`div`).attr(`id`, `tooltip`).attr(`style`, `position: absolute; opacity: 0`);
 
-// const clicked = (d: any) => {
-// 	let x;
-// 	let y;
-// 	let zoomLevel;
+// Show tooltip when hovering over a region
+const handleMouseOver = name => {
+	d3.select(`#tooltip`)
+		.style(`opacity`, 1)
+		.style(`background-color`, `white`)
+		.style(`color`, `black`)
+		.style(`border-radius`, `0.25rem`)
+		.style(`padding`, `0.25rem`)
+		.text(name);
+};
 
-// 	if (d && centered !== d) {
-// 		let centroid = path.centroid(d);
-// 		x = centroid[0];
-// 		y = centroid[1];
-// 		zoomLevel = zoomSettings.zoomLevel;
-// 		centered = d;
-// 	} else {
-// 		x = width / 2;
-// 		y = height / 2;
-// 		zoomLevel = 1;
-// 		centered = null;
-// 	}
+// Hide tooltip as mouse leaves region
+const handleMouseOut = () => {
+	d3.select(`#tooltip`).style(`opacity`, 0);
+};
 
-// 	g.transition().duration(zoomSettings.duration).ease(zoomSettings.ease).attr('transform', `translate(${width / 2}, ${height / 2})
-// };
+// Get mouse location so tooltip tracks cursor
+const handleMouseMove = event => {
+	d3.select(`#tooltip`)
+		.style(`left`, `${event.pageX + 10}px`)
+		.style(`top`, `${event.pageY + 10}px`);
+};

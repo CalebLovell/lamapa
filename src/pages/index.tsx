@@ -1,11 +1,11 @@
 import { PageWrapper } from '@components/PageWrapper';
-import { InfoPanel } from '@components/InfoPanel';
-import { TimelineSlider } from '@components/TimelineSlider';
+import { MapHeader } from '@components/MapHeader';
+import { MapTimeline } from '@components/MapTimeline';
 import dynamic from 'next/dynamic';
 import { useHeadsOfState } from '@hooks/useHeadsOfState';
 import { useStore } from '@data/store';
 import { MapKey } from '@components/MapKey';
-import { Header } from '@components/Header';
+import { Toolbar } from '@components/Toolbar';
 
 const DynamicMap = dynamic(() => import(`@components/Map`), {
 	ssr: false,
@@ -19,17 +19,20 @@ const Index = () => {
 
 	return (
 		<PageWrapper>
-			<div className='flex flex-col items-center h-screen bg-orange-100'>
+			<div className='flex flex-col items-center h-screen bg-gray-300'>
 				<div className='flex flex-col h-full max-w-3xl'>
-					<Header />
 					<main className='flex flex-col h-full'>
+						<div className='relative px-2'>
+							<MapHeader headOfState={selectedHeadOfState} />
+							<Toolbar />
+						</div>
 						<div className='relative flex items-center justify-center h-full'>
 							<MapKey />
 							<div className='h-full'>
 								<DynamicMap />
 							</div>
 						</div>
-						<TimelineSlider />
+						<MapTimeline />
 					</main>
 				</div>
 			</div>
@@ -38,10 +41,3 @@ const Index = () => {
 };
 
 export default Index;
-
-const working = (
-	<div className='flex flex-col w-full h-1 max-w-3xl' style={{ minHeight: `inherit` }}>
-		<DynamicMap />
-		<TimelineSlider />
-	</div>
-);
