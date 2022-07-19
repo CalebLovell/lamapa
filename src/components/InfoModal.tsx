@@ -9,20 +9,20 @@ export const InfoModal = () => {
 	const setIsOpen = useStore(state => state.setModalIsOpen);
 
 	return (
-		<Dialog open={isOpen} onClose={() => setIsOpen(false)} className='relative z-50'>
-			<div className='fixed inset-0 bg-black/30' aria-hidden='true' />
-			{/* Full-screen scrollable container */}
-			<div className='fixed inset-0 flex items-center justify-center sm:p-2'>
-				{/* Container to center the panel */}
-				<div className='flex items-center justify-center h-full max-w-3xl'>
-					{/* The actual dialog panel  */}
-					<Dialog.Panel className='relative w-full h-full p-4 overflow-auto text-gray-800 bg-gray-100 rounded'>
-						<Dialog.Title className='mx-8 mb-2 text-2xl font-bold text-center sm:mx-2'>Latin America Political History Map</Dialog.Title>
-						<button onClick={() => setIsOpen(false)}>
-							<XCircleIcon className='absolute right-0 w-8 h-8 mr-2 text-red-700 top-3' />
-						</button>
+		<Dialog
+			open={isOpen}
+			onClose={() => setIsOpen(false)}
+			className='fixed top-0 left-0 z-40 w-full h-full overflow-x-hidden overflow-y-auto text-gray-800'
+		>
+			<div className='fixed inset-0 bg-black/50' aria-hidden='true' />
+			<div className='relative flex items-center w-full h-full max-w-3xl px-2 mx-auto py-14'>
+				<div className='relative flex flex-col w-full max-h-full overflow-hidden bg-gray-100 border-none rounded'>
+					<div className='flex items-center justify-between flex-shrink-0 p-4 border-b border-gray-200 rounded-t'>
+						<Dialog.Title className='text-2xl font-bold'>Latin America Political History Map</Dialog.Title>
+					</div>
+					<Dialog.Panel className='relative flex-auto p-4 overflow-y-auto'>
 						<div className='flex items-center mb-2'>
-							<ExclamationCircleIcon className='mr-2 h-5 w-5 pt-0.5 text-red-700' />
+							<ExclamationCircleIcon className='w-5 h-5 mr-2 text-red-700' />
 							<Dialog.Title as='h3' className='text-xl font-semibold'>
 								Disclaimer
 							</Dialog.Title>
@@ -47,7 +47,7 @@ export const InfoModal = () => {
 							visualization, nothing more.
 						</Dialog.Description>
 						<div className='flex items-center mb-2'>
-							<MailIcon className='mr-2 h-5 w-5 pt-0.5 text-blue-600' />
+							<MailIcon className='w-5 h-5 mr-2 text-blue-600' />
 							<Dialog.Title as='h3' className='text-xl font-semibold'>
 								Contact Me
 							</Dialog.Title>
@@ -57,12 +57,14 @@ export const InfoModal = () => {
 							the data or other bugs, or just have a comment, I would love to hear from you! You can contact me <a href='/'>here</a>, or on my
 							social media.
 						</Dialog.Description>
-						<div className='flex items-center justify-center mt-4 space-x-6 md:mt-0'>
+					</Dialog.Panel>
+					<div className='flex flex-wrap items-center justify-between flex-shrink-0 p-4 border-t border-gray-200 rounded-b'>
+						<div className='flex items-center justify-center space-x-2'>
 							{socials.map(x => (
 								<a
 									key={x.title}
 									href={x.href}
-									className='p-2 rounded-md hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-gray-800'
+									className='p-2 rounded hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2 focus:ring-offset-gray-800'
 									target='_blank'
 									rel='noreferrer'
 								>
@@ -71,7 +73,13 @@ export const InfoModal = () => {
 								</a>
 							))}
 						</div>
-					</Dialog.Panel>
+						<button
+							type='button'
+							className='rounded bg-red-600 px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white transition duration-150 ease-in-out hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-purple-800 active:shadow-lg'
+						>
+							Close
+						</button>
+					</div>
 				</div>
 			</div>
 		</Dialog>
